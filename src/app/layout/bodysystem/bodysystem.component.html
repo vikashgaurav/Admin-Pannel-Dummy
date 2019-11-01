@@ -1,0 +1,123 @@
+<app-header></app-header>
+
+<div class="layout-main">
+  <app-left-sidebar></app-left-sidebar>
+  <div class="subadminPage"></div>
+  <div class="sellerListPage ExplorerListPage">
+    <div class="layout-content">
+      <div class="layout-content-body">
+        <div class="title-bar">
+          <h1 class="title-bar-title">
+            <span class="d-ib">Ailment</span>
+          </h1>
+        </div>
+        <div class="row gutter-xs">
+          <div class="col-xs-12">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-actions">
+                  <!-- <button type="button" class="card-action card-toggler" title="Collapse"></button>
+                              <button type="button" class="card-action card-reload" title="Reload"></button> -->
+
+                </div>
+                <strong>Ailment List</strong>
+              </div>
+              <div class="card-body">
+                <div class="row" style="margin-bottom: 10px;">
+                  <div class="col-md-9">
+
+                  </div>
+                  <div class="col-md-3">
+                    <input class="form-control" (keyup)="applyFilter($event.target.value)" type="search" placeholder="search..." />
+                    <!-- <div class="xsl">
+                              <button class="btn btn-info btn-sm btn-labeled f-16" type="button" data-toggle="modal" data-target="#addUser" (click)="addNewEmployee()">
+                                Add Employee
+                              </button>
+                            </div> -->
+                  </div>
+                </div>
+
+                <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+                  <!-- Position Column -->
+                  <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> S. No. </th>
+                    <!-- <td mat-cell *matCellDef="let element; let i = index"> {{i+1}} </td> -->
+                  </ng-container>
+
+                  <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Email ID </th>
+                    <!-- <td mat-cell *matCellDef="let element"> {{element.email_id}}</td> -->
+                  </ng-container>
+
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="description">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                    <!-- <td mat-cell *matCellDef="let element"> {{element.first_Name}} {{element.last_name}}</td> -->
+                  </ng-container>
+
+                  <!-- Weight Column -->
+                  <ng-container matColumnDef="supporting_product">
+                    <th mat-header-cell *matHeaderCellDef> User ID </th>
+                    <!-- <td mat-cell *matCellDef="let element"> {{element.unique_id}} </td> -->
+                  </ng-container>
+
+                  <!-- Symbol Column -->
+                  <ng-container matColumnDef="body_system">
+                    <th mat-header-cell *matHeaderCellDef> Refer ID. </th>
+                    <!-- <td mat-cell *matCellDef="let element"> {{element.refercode}} </td> -->
+                  </ng-container>
+
+                  <!-- <ng-container matColumnDef="country">
+                    <th mat-header-cell *matHeaderCellDef> Country </th>
+                    <td mat-cell *matCellDef="let element"> {{element.is_country}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef> Status </th>
+                    <td mat-cell *matCellDef="let element"><span [ngClass]="{'text-danger': element.is_blocked, 'text-success': !element.is_blocked}">
+                        {{element.is_blocked ? "Blocked" : "Unblocked"}} </span></td>
+                  </ng-container> -->
+
+                  <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef> Action </th>
+                    <td mat-cell *matCellDef="let element">
+                      <!-- <button class="btn btn-success btn-sm btn-labeled" type="button" data-toggle="modal" data-target="#addUser" (click)="selectEditUser(element)">
+                                    <span class="btn-label">
+                                    <i class="fa fa-edit icon-lg icon-fw" aria-hidden="true"></i>
+                                    </span>
+                                    Edit
+                                </button> -->
+                      <button class="btn btn-sm btn-labeled" [ngClass]="{'btn-info': element.is_block, 'btn-warning': !element.is_block}"
+                        type="button" data-toggle="modal" data-target="#blockUser" (click)="selectBlockUser(element)">
+                        <span class="btn-label">
+                          <i class="fa fa-ban f-16" aria-hidden="true"></i>
+                        </span>
+                        {{element.is_blocked ? 'Unblock' : 'Block'}}
+                      </button>
+                      <button class="btn btn-danger btn-sm btn-labeled" type="button" data-toggle="modal" data-target="#deleteUser"
+                        (click)="selectDeleteUser(element)">
+                        <span class="btn-label">
+                          <i class="fa fa-trash icon-lg icon-fw"></i>
+                        </span>
+                        Delete
+                      </button>
+                      <!-- <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label> -->
+                    </td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                <mat-paginator [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons></mat-paginator>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>

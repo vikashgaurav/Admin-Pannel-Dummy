@@ -1,0 +1,93 @@
+<app-header></app-header>
+<div class="layout-main">
+<app-left-sidebar></app-left-sidebar>
+<div class="profilePage"></div>
+<div class="layout-content">
+    <div class="layout-content-body">
+        <div class="title-bar">
+
+            <h1 class="title-bar-title">
+              <span class="d-ib">Edit Profile </span>
+              <!-- <a href="profile.php">Back to list</a> -->
+            </h1>
+        </div>
+        <div class="row gutter-xs">
+            <div class="col-md-8 card panel-body" style="box-shadow: 0px 0px 14px #999;">
+                <div class="col-sm-12 col-md-12">
+                    <div class="demo-form-wrapper">
+                        <form class="form form-horizontal" [formGroup]="editProfile">
+                            <div class="form-group">
+                             <div class="col-md-6">
+                              <label class=" control-label">First Name</label>
+                              <input formControlName="first_name" class="form-control" type="text" [ngClass]="{'is-invalid': submitted && f.first_name.errors}">
+                              <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback">
+                                  <div *ngIf="submitted && f.first_name.errors.required">First name is required.</div>
+                              </div>
+                             </div>
+                             <div class="col-md-6">
+                                <label class=" control-label">Last Name</label>
+                                <input formControlName="last_name" class="form-control" type="text" [ngClass]="{'is-invalid': submitted && f.last_name.errors}">
+                                <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback">
+                                    <div *ngIf="submitted && f.last_name.errors.required">Last name is required.</div>
+                                </div>
+                             </div>
+                            </div>
+                            <div class="form-group">
+                             <div class="col-md-6 add-pic">
+                              <label class=" control-label">Add Images</label>
+                              <div class="pic-box">
+                                <div class="logoImg">
+                                 <img src="{{adminData.profile_image ? environment.baseUrl+'/'+adminData.profile_image : 'assets/img/3002121059.jpg'}}" id="result">
+                                <!-- id="profile-img" -->
+                                 <input id='imgUpload' (change)="onFileChanged($event)" type="file" class="hide">
+                                 <label (click)="openImage()"  for="profile-img" class="btn btn-large"></label>
+                                </div>
+                              </div>
+                             </div>
+                             <div class="col-md-6">
+                                <label class=" control-label">Mobile</label>
+                                <input formControlName="contact" class="form-control" type="text" [ngClass]="{'is-invalid': submitted && f.contact.errors}">
+                                <div *ngIf="submitted && f.contact.errors" class="invalid-feedback">
+                                    <div *ngIf="submitted && f.contact.errors.required">Mobile number is required.</div>
+                                    <div *ngIf="submitted && f.contact.errors.minlength">Mobile number  must be 8 digit.</div> 
+                                    <div *ngIf="submitted && f.contact.errors.maxlength">Mobile number is not greater than 15 digit.</div>
+                                </div>
+                             </div>
+                             <div class="col-md-6">
+                                <label class=" control-label">Email ID</label>
+                                <input formControlName="email" class="form-control" type="text" [ngClass]="{'is-invalid': submitted && f.email.errors}">
+                                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                    <div *ngIf="submitted && f.email.errors.required">Email id is required.</div>
+                                </div>
+                             </div>
+                             <div class="col-md-6">
+                                <label class=" control-label">City</label>
+                                <input formControlName="city" class="form-control" type="text">
+                                <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+                                    <div *ngIf="submitted && f.city.errors.required">city id is required.</div>
+                                </div>
+                             </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="col-md-12">
+                                <label for="about" class=" control-label">Description</label>
+                                <textarea formControlName="description" class="form-control" rows="3"></textarea>
+                              </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class=" col-sm-8  col-md-8 ">
+                                    <button class="btn btn-primary " type="submit" (click)="submit()">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<app-footer></app-footer>
+</div>

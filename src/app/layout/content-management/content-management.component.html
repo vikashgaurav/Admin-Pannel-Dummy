@@ -1,0 +1,124 @@
+<app-header></app-header>
+
+<div class="layout-main">
+  <app-left-sidebar></app-left-sidebar>
+  <div class="subadminPage"></div>
+  <div class="sellerListPage ExplorerListPage">
+    <div class="layout-content">
+      <div class="layout-content-body">
+        <div class="title-bar margin-bottom-40">
+          <h1 class="title-bar-title">
+            <span class="d-ib">Content Management</span>
+          </h1>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-sm-4 col-md-3 margin-bottom-30" *ngFor="let element of contentlist">
+            <div class="card rounded-5 border-1">
+              <div class="card-body">
+                <span class="btn btn-sm btn-danger pos-right-top-12 rounded-5">{{element.count}}</span>
+                <h4 class="text-uppercase">{{element.content_name}}</h4>
+                <p></p>
+              </div>
+              <div class="card-footer text-center bg-secondary">
+                <a class="pull-right fs-20 margin-left-10" (click)="getdata(element)"><i class="fa fa-eye text-primary" ></i></a>
+                <a class="pull-right fs-20"><i class="fa fa-plus-circle text-success" (click)="getroutingdata(element)"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-xs-6 col-sm-4 col-md-3 margin-bottom-30">
+            <div class="card rounded-5 border-1">
+              <div class="card-body">
+                <span class="btn btn-sm btn-danger pos-right-top-12 rounded-5">45</span>
+                <h4 class="text-uppercase">Symstoms</h4>
+                <p></p>
+              </div>
+              <div class="card-footer text-center bg-secondary">
+                <a class="pull-right fs-20 margin-left-10"><i class="fa fa-eye text-primary"></i></a>
+                <a class="pull-right fs-20"><i class="fa fa-plus-circle text-success"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-md-3 margin-bottom-30">
+            <div class="card rounded-5 border-1">
+              <div class="card-body">
+                <span class="btn btn-sm btn-danger pos-right-top-12 rounded-5">45</span>
+                <h4 class="text-uppercase">Remedies</h4>
+                <p></p>
+              </div>
+              <div class="card-footer text-center bg-secondary">
+                <a class="pull-right fs-20 margin-left-10"><i class="fa fa-eye text-primary"></i></a>
+                <a class="pull-right fs-20"><i class="fa fa-plus-circle text-success"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-md-3 margin-bottom-30">
+            <div class="card rounded-5 border-1">
+              <div class="card-body">
+                <span class="btn btn-sm btn-danger pos-right-top-12 rounded-5">45</span>
+                <h4 class="text-uppercase">Oils</h4>
+                <p></p>
+              </div>
+              <div class="card-footer text-center bg-secondary">
+                <a class="pull-right fs-20 margin-left-10"><i class="fa fa-eye text-primary"></i></a>
+                <a class="pull-right fs-20"><i class="fa fa-plus-circle text-success"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-md-3 margin-bottom-30">
+            <div class="card rounded-5 border-1">
+              <div class="card-body">
+                <span class="btn btn-sm btn-danger pos-right-top-12 rounded-5">45</span>
+                <h4 class="text-uppercase">Blends</h4>
+                <p></p>
+              </div>
+              <div class="card-footer text-center bg-secondary">
+                <a class="pull-right fs-20 margin-left-10"><i class="fa fa-eye text-primary"></i></a>
+                <a class="pull-right fs-20"><i class="fa fa-plus-circle text-success"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-md-3 margin-bottom-30">
+            <div class="card rounded-5 border-1">
+              <div class="card-body">
+                <span class="btn btn-sm btn-danger pos-right-top-12 rounded-5">45</span>
+                <h4 class="text-uppercase">Supplement</h4>
+                <p></p>
+              </div>
+              <div class="card-footer text-center bg-secondary">
+                <a class="pull-right fs-20 margin-left-10"><i class="fa fa-eye text-primary"></i></a>
+                <a class="pull-right fs-20"><i class="fa fa-plus-circle text-success"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-md-3 margin-bottom-30">
+            <div class="card rounded-5 border-1">
+              <div class="card-body">
+                <span class="btn btn-sm btn-danger pos-right-top-12 rounded-5">45</span>
+                <h4 class="text-uppercase">Property</h4>
+                <p></p>
+              </div>
+              <div class="card-footer text-center bg-secondary">
+                <a class="pull-right fs-20 margin-left-10"><i class="fa fa-eye text-primary"></i></a>
+                <a class="pull-right fs-20"><i class="fa fa-plus-circle text-success"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-4 col-md-3 margin-bottom-30">
+            <div class="card rounded-5 border-1">
+              <div class="card-body">
+                <span class="btn btn-sm btn-danger pos-right-top-12 rounded-5">45</span>
+                <h4 class="text-uppercase">Body system</h4>
+                <p></p>
+              </div>
+              <div class="card-footer text-center bg-secondary">
+                <a class="pull-right fs-20 margin-left-10"><i class="fa fa-eye text-primary"></i></a>
+                <a class="pull-right fs-20"><i class="fa fa-plus-circle text-success"></i></a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>

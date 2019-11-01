@@ -1,0 +1,22 @@
+<div class="login-middle">
+  <div class="login">
+    <div class="login-body">
+      <a class="login-brand" href="javascript:void(0)">
+        <img class="img-responsive" src="assets/img/logo-blk.png" alt="logo">
+      </a>
+      <div class="login-form">
+        <form (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+          <div class="form-group">
+            <label for="verification_code">Enter Otp</label>
+            <input id="verification_code" [(ngModel)]="forgotPassword.verification_code" #verification_code="ngModel" [ngClass]="{'is-invalid': f.submitted && verification_code.invalid}"
+              class="form-control" type="number" name="verification_code" required>
+            <div *ngIf="f.submitted && verification_code.invalid" class="invalid-feedback">
+              <div *ngIf="verification_code.errors.required">Verification code is required</div>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

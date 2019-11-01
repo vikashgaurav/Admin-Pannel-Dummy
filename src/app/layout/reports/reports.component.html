@@ -1,0 +1,446 @@
+<app-header></app-header>
+<div class="layout-main">
+<app-left-sidebar></app-left-sidebar>
+<div class="subadminPage"></div>
+<div class="reportsPage">
+  <div class="layout-content">
+      <div class="layout-content-body">
+          <div class="title-bar">
+              <h1 class="title-bar-title">
+                <span class="d-ib">Report Generation</span>
+              </h1>
+          </div>
+          <div class="row gutter-xs">
+              <div class="col-xs-12">
+                  <div class="card">
+                      <div class="card-header">
+                          <div class="card-actions">
+                              <button type="button" class="card-action card-toggler" title="Collapse"></button>
+                              <button type="button" class="card-action card-reload" title="Reload"></button>
+
+                          </div>
+                          <strong>Report List</strong>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class='col-lg-8 col-md-6 col-sm-12 col-xs-12'></div>
+                          <div class='col-lg-2 col-md-3 col-sm-6 col-xs-6'>
+                              <div class="xsl">
+                                  <button class="btn btn-info btn-sm btn-labeled f-16" type="button">
+                                     Export to CSV
+                                  </button>
+                              </div>
+                          </div>
+                          <div class='col-lg-2 col-md-3 col-sm-6 col-xs-6'>
+                              <div class="xsl">
+                                <span><select class="form-control">
+                                      <option>Daily</option>
+                                      <option>Monthly</option>
+                                      <option>Weekly</option>
+                                      <option>Yearly</option>
+                                    </select></span>
+                              </div>
+                          </div>
+                        </div>
+                          
+                          <div class="row gutter-xs">
+                            <div class="col-md-4">
+                              <div class="card">
+                                <div class="card-body">
+                                    <div class="paki-das">
+                                        <h4 class="text-primary"> Total App Downloads <div class="float-right">
+                                          <input type="checkbox" class="form-control" name="yevo">
+                                          
+                                          </div>
+                                    </h4>
+                                     <p>  App</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="paki-das-mid">
+                                                <div class="media-middle media-left">
+                                                    <span class="bg-danger circle sq-64">
+                                                      <span class="icon fa fa-mobile"></span>
+                                                    </span>
+                                                  </div>
+                                             </div>
+                                         </div>
+                                       <div class="col-md-4">
+                                           <div class="das-total text-danger">
+                                                300
+                                           </div>
+                                       </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                      <div class="paki-das">
+                                          <h4 class="text-primary"> Total Users<div class="float-right">
+                                              <input type="checkbox" class="form-control" name="yevo">
+                                              
+                                              </div>
+                                      </h4>
+                                       <p> Users</p>
+                                      </div>
+                                      <div class="row">
+                                         <div class="col-md-8">
+                                            <div class="paki-das-mid">
+                                                <div class="media-middle media-left">
+                                                    <span class="bg-success circle sq-64">
+                                                      <span class="icon fa fa-users"></span>
+                                                    </span>
+                                                  </div>
+                                             </div>
+                                         </div>
+                                         <div class="col-md-4">
+                                             <div class="das-total text-success">
+                                                300
+                                             </div>
+                                         </div>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="card">
+                                    <div class="card-body">
+                                        <div class="paki-das">
+                                            <h4 class="text-primary"> Total Risk Assessment Form <div class="float-right">
+                                                <input type="checkbox" class="form-control" name="yevo">
+                                                
+                                                </div>
+                                        </h4>
+                                         <p> Assessment</p>
+                                        </div>
+                                        <div class="row">
+                                           <div class="col-md-8">
+                                              <div class="paki-das-mid">
+                                                  <span class="bg-info sq-64 circle">
+                                                      <span class="icon icon-list"></span>
+                                                    </span>
+                                               </div>
+                                           </div>
+                                           <div class="col-md-4">
+                                               <div class="das-total text-info">
+                                                    300
+                                               </div>
+                                           </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</div>
+<app-footer></app-footer>
+</div>
+
+<div id="viewSeller" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header bg-primary">
+           <button type="button" class="close" data-dismiss="modal">
+             <span aria-hidden="true">×</span>
+             <span class="sr-only">Close</span>
+           </button>
+           <h4 class="modal-title">Seller full detail</h4>
+         </div>
+         <div class="modal-body provider-detail">
+          <div class="row">
+           <div class="col-md-6">
+             <div class="card text-center">
+               <div class="card-image">
+                 <div class="overlay">
+                 </div>
+               </div>
+               <div class="card-avatar text-left">
+                 <a class="card-thumbnail rounded" style="width: 150px;height: 160px;overflow: hidden;" href="#">
+                   <img class="img-responsive" src="img/8447261358.jpg" alt="Instagram">
+                 </a>
+               </div>
+               <div class="card-body">
+                 <h3 class="card-title text-left">Seller name</h3>
+                 <p class="card-text text-left">
+                   <span class="app-users">
+                    <span class="icon icon-map-marker"></span>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel harum sequi,
+                     
+                   </span>
+                 </p>
+               </div>
+             </div>
+           </div>
+           <div class="col-md-6">
+                 <div class="card">
+                   <div class="card-body">
+                     <ul class="media-list">
+                       <li class="media">
+                         <div class="media-middle media-body">
+                           <h4 class="m-y-0">Phone number</h4>
+                           <small>987862254</small>
+                         </div>
+                       </li>
+                       <li class="media">
+                         <div class="media-middle media-body">
+                           <h4 class="m-y-0">Country</h4>
+                           <small>India</small>
+                         </div>
+                       </li>
+                       <li class="media">
+                         <div class="media-middle media-body">
+                           <h4 class="m-y-0">City</h4>
+                           <small>Delhi</small>
+                         </div>
+                       </li>
+                       <li class="media">
+                         <div class="media-middle media-body">
+                           <h4 class="m-y-0">Email</h4>
+                           <small>seller@gmail.com</small>
+                         </div>
+                       </li>
+                     </ul>
+                   </div>
+                 </div>
+               </div>
+          </div>
+         </div>
+         <div class="modal-footer"></div>
+       </div>
+     </div>      
+   </div>
+   <div id="addUser" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header bg-primary">
+           <button type="button" class="close" data-dismiss="modal">
+             <span aria-hidden="true">×</span>
+             <span class="sr-only">Close</span>
+           </button>
+           <h4 class="modal-title">Add new Subadmin</h4>
+         </div>
+         <div class="modal-body provider-detail">
+          <div class="row">
+           <div class="col-xs-12">
+            <form class="form">
+                   <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="" class="control-label">Select Region</label>
+                              <select class="form-control">
+                                  <option>Choose</option>
+                                  <option>Choose</option>
+                                  <option>Choose</option>
+                                  <option>Choose</option>
+                              </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              <label for="" class="control-label">Select Region</label>
+                                <select class="form-control">
+                                    <option>Choose</option>
+                                    <option>Choose</option>
+                                    <option>Choose</option>
+                                    <option>Choose</option>
+                                </select>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <label for="" class="control-label">Select User Type</label>
+                                  <div class="radio">
+                                      <label>
+                                        <input type="radio" name="message" value="none"> Admin
+                                      </label>
+                                  </div>
+                                  <div class="radio">
+                                      <label>
+                                        <input type="radio" name="message" value="none"> Subdamin
+                                      </label>
+                                  </div>
+                              </div>
+                          </div> 
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="" class="control-label">User Name</label>
+                                  <input id="" class="form-control" type="text">
+                              </div>
+                          </div>    
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="" class="control-label">Email</label>
+                                  <input id="" class="form-control" type="text">
+                              </div>
+                          </div>    
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="" class="control-label">Password</label>
+                                  <input id="" class="form-control" type="text">
+                              </div>
+                          </div>  
+                          <div class="col-md-6">
+                              <div class="form-group">
+                                  <label for="" class="control-label">Mobile Number</label>
+                                  <input id="" class="form-control" type="text">
+                              </div>
+                          </div>   
+                          <div class="col-md-12">
+                              <div class="form-group add-membrs">
+                                      <h5>Module rights to be given:
+                                      </h5>
+                                      <ul>
+                                        <li>
+                                             Dashboard 
+                                             <label class="container_check">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                             </label>
+                                        </li>
+                                         <li>
+                                             Order Management
+                                             <label class="container_check">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                             </label>
+                                        </li>
+                                         <li>
+                                             Account Management 
+                                             <label class="container_check">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                             </label>
+                                        </li>
+                                         <li>
+                                             Payment Management  
+                                             <label class="container_check">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                             </label>
+                                        </li>
+                                         <li>
+                                             Member Management 
+                                             <label class="container_check">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                             </label>
+                                        </li>
+                                         <li>
+                                             Report Generation  
+                                             <label class="container_check">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                             </label>
+                                        </li>
+                                         <li>
+                                               Chat Management 
+                                               <label class="container_check">
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                             </label>
+                                         </li>
+                                          <li>
+                                             Product Management 
+                                             <label class="container_check">
+                                                <input type="checkbox">
+                                                <span class="checkmark"></span>
+                                           </label> 
+                                         </li>
+                                      </ul>
+                                    </div>
+                          </div>    
+                          <div class=" col-sm-12 col-md-12">
+                              <div class="form-group padding-top-10">
+                                  <button class="btn btn-primary mr-5" type="" data-target="#unblockUser" data-toggle="modal">Add and Generate Login</button>
+                                  <button class="btn btn-danger" type="submit">Cancel</button>
+                              </div>
+                          </div>
+                   </div>
+             </form>  
+            </div> 
+          </div>
+         </div>
+         <div class="modal-footer"></div>
+       </div>
+     </div>      
+   </div>
+   <div id="unblockUser" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal">
+             <span aria-hidden="true">×</span>
+             <span class="sr-only">Close</span>
+           </button>
+         </div>
+         <div class="modal-body">
+           <div class="text-center">
+             <span class="text-success icon icon-times-circle icon-5x"></span>
+             <h3 class="text-success">Sure</h3>
+             <h4>Are you want to unblock this item?</h4>
+             <div class="m-t-lg">
+               <button class="btn btn-success" data-dismiss="modal" type="button">Continue</button>
+               <button class="btn btn-default" data-dismiss="modal" type="button">Cancel</button>
+             </div>
+           </div>
+         </div>
+         <div class="modal-footer"></div>
+       </div>
+     </div>      
+   </div>
+   <div id="deleteUser" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog">
+       <div class="modal-content">
+         <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal">
+             <span aria-hidden="true">×</span>
+             <span class="sr-only">Close</span>
+           </button>
+         </div>
+         <div class="modal-body">
+           <div class="text-center">
+             <span class="text-danger icon icon-times-circle icon-5x"></span>
+             <h3 class="text-danger">Danger</h3>
+             <h4>Are you want to delete this item</h4>
+             <div class="m-t-lg">
+               <button class="btn btn-danger" data-dismiss="modal" type="button">Continue</button>
+               <button class="btn btn-default" data-dismiss="modal" type="button">Cancel</button>
+             </div>
+           </div>
+         </div>
+         <div class="modal-footer"></div>
+       </div>
+     </div>      
+   </div>
+   <div id="blockUser" tabindex="-1" role="dialog" class="modal fade">
+      <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal">
+               <span aria-hidden="true">×</span>
+               <span class="sr-only">Close</span>
+             </button>
+           </div>
+           <div class="modal-body">
+             <div class="text-center">
+               <span class="text-danger text-red-color icon icon-times-circle icon-5x"></span>
+               <h3 class="text-danger text-red-color ">Block</h3>
+               <h4>Are you want to block this item</h4>
+               <div class="m-t-lg">
+                 <button class="btn btn-danger" data-dismiss="modal" type="button">Continue</button>
+                 <button class="btn btn-default" data-dismiss="modal" type="button">Cancel</button>
+               </div>
+             </div>
+           </div>
+           <div class="modal-footer"></div>
+         </div>
+       </div>      
+     </div>
