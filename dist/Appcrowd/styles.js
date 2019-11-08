@@ -598,8 +598,8 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/fluper/Documents/1.office project/Appcrowd_admin/src/styles.css */"./src/styles.css");
-module.exports = __webpack_require__(/*! /home/fluper/Documents/1.office project/Appcrowd_admin/node_modules/ngx-toastr/toastr.css */"./node_modules/ngx-toastr/toastr.css");
+__webpack_require__(/*! /home/fluper/Documents/1.office project/App_crowd_app/app_crowd_admin/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /home/fluper/Documents/1.office project/App_crowd_app/app_crowd_admin/node_modules/ngx-toastr/toastr.css */"./node_modules/ngx-toastr/toastr.css");
 
 
 /***/ })

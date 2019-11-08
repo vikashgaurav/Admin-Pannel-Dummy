@@ -2376,8 +2376,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
 var environment = {
     production: false,
-    baseUrl: 'http://localhost:3000/'
-    //baseUrl:'http://13.235.233.112:3000/'
+    //baseUrl: 'http://localhost:3000/'
+    baseUrl: 'http://3.14.143.205:3000/'
 };
 
 
@@ -2416,7 +2416,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/fluper/Documents/1.office project/Appcrowd_admin/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/fluper/Documents/1.office project/App_crowd_app/app_crowd_admin/src/main.ts */"./src/main.ts");
 
 
 /***/ }),
