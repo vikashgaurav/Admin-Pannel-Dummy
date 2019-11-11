@@ -8,7 +8,7 @@
       <div class="layout-content-body">
         <div class="title-bar">
           <h1 class="title-bar-title">
-            <span class="d-ib">Ailment</span>
+            <span class="d-ib">User Management</span>
           </h1>
         </div>
         <div class="row gutter-xs">
@@ -20,12 +20,12 @@
                               <button type="button" class="card-action card-reload" title="Reload"></button> -->
 
                 </div>
-                <strong>Ailment List</strong>
+                <strong>User List</strong>
               </div>
               <div class="card-body">
                 <div class="row" style="margin-bottom: 10px;">
                   <div class="col-md-9">
-
+                    <!-- <button (click)="exportAsXLSX()"><i class="fa fa-file-excel-o" style="font-size:48px;color:blue"></i></button> -->
                   </div>
                   <div class="col-md-3">
                     <input class="form-control" (keyup)="applyFilter($event.target.value)" type="search" placeholder="search..." />
@@ -41,42 +41,38 @@
                   <!-- Position Column -->
                   <ng-container matColumnDef="position">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> S. No. </th>
-                    <!-- <td mat-cell *matCellDef="let element; let i = index"> {{i+1}} </td> -->
+                    <td mat-cell *matCellDef="let element; let i = index"> {{i+1}} </td>
                   </ng-container>
 
-                  <ng-container matColumnDef="name">
+                  <ng-container matColumnDef="empid">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Email ID </th>
-                    <!-- <td mat-cell *matCellDef="let element"> {{element.email_id}}</td> -->
+                    <td mat-cell *matCellDef="let element"> {{element.email_id}}</td>
                   </ng-container>
 
                   <!-- Name Column -->
-                  <ng-container matColumnDef="description">
+                  <ng-container matColumnDef="name">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-                    <!-- <td mat-cell *matCellDef="let element"> {{element.first_Name}} {{element.last_name}}</td> -->
+                    <td mat-cell *matCellDef="let element"> {{element.full_name}}</td>
                   </ng-container>
 
-                  <!-- Weight Column -->
-                  <ng-container matColumnDef="supporting_product">
-                    <th mat-header-cell *matHeaderCellDef> User ID </th>
-                    <!-- <td mat-cell *matCellDef="let element"> {{element.unique_id}} </td> -->
-                  </ng-container>
 
-                  <!-- Symbol Column -->
-                  <ng-container matColumnDef="body_system">
-                    <th mat-header-cell *matHeaderCellDef> Refer ID. </th>
-                    <!-- <td mat-cell *matCellDef="let element"> {{element.refercode}} </td> -->
-                  </ng-container>
 
-                  <!-- <ng-container matColumnDef="country">
-                    <th mat-header-cell *matHeaderCellDef> Country </th>
-                    <td mat-cell *matCellDef="let element"> {{element.is_country}} </td>
+                  <ng-container matColumnDef="mobile">
+                    <th mat-header-cell *matHeaderCellDef> Mobile No. </th>
+                    <td mat-cell *matCellDef="let element"> {{element.country_code}}{{element.mobile_number}} </td>
                   </ng-container>
 
                   <ng-container matColumnDef="status">
                     <th mat-header-cell *matHeaderCellDef> Status </th>
                     <td mat-cell *matCellDef="let element"><span [ngClass]="{'text-danger': element.is_blocked, 'text-success': !element.is_blocked}">
                         {{element.is_blocked ? "Blocked" : "Unblocked"}} </span></td>
-                  </ng-container> -->
+                  </ng-container>
+
+                  <ng-container matColumnDef="created_on">
+                    <th mat-header-cell *matHeaderCellDef> Created At </th>
+                    <td mat-cell *matCellDef="let element"> {{(element.created_on)*1000 | date}} </td>
+                  </ng-container>
+
 
                   <ng-container matColumnDef="action">
                     <th mat-header-cell *matHeaderCellDef> Action </th>
@@ -101,10 +97,7 @@
                         </span>
                         Delete
                       </button>
-                      <!-- <label class="switch">
-                                    <input type="checkbox" checked>
-                                    <span class="slider round"></span>
-                                </label> -->
+
                     </td>
                   </ng-container>
 
@@ -121,3 +114,68 @@
     </div>
   </div>
   <app-footer></app-footer>
+  <!-----  Modal Block   ---->
+  <div id="blockUser" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="text-center">
+            <h4 style="color:  #c90101;">Are you sure you want to {{selectedBlockUser?.is_block ? 'unblock' : 'block'}}
+              this user?</h4>
+            <div class="m-t-lg">
+              <button class="btn btn-danger" data-dismiss="modal" type="button" (click)="blockUser()">Yes</button>
+              <button class="btn btn-success" data-dismiss="modal" type="button">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-----  Modal Block   ---->
+  <!-- Modal Block Confirm-->
+  <div class="modal fade" id="deleted-me">
+    <div class="modal-dialog modal-sm" data-dismiss="modal">
+      <div class="modal-content">
+        <div class="modal-body" style="text-align: center;">
+          <h4 style="color:  #c90101;">Blocked Successfully !</h4>
+          <div class="successful-icon" style="color:  #c90101;">
+            <i class="fa fa-check-square"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Modal Block Confirm-->
+
+  <!-----  Modal DELETE   ---->
+  <div id="deleteUser" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="text-center">
+            <h4 style="color:  #c90101;">Are you sure you want to delete this Professional?</h4>
+            <div class="m-t-lg">
+              <button class="btn btn-danger" data-dismiss="modal" type="button" (click)="deleteUser()">Yes</button>
+              <button class="btn btn-success" data-dismiss="modal" type="button">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="deleted-me">
+    <div class="modal-dialog modal-sm" data-dismiss="modal">
+      <div class="modal-content">
+        <div class="modal-body" style="text-align: center;">
+          <h4 style="color:  #c90101;">Deleted Successfully !</h4>
+          <div class="successful-icon" style="color:  #c90101;">
+            <i class="fa fa-check-square"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>

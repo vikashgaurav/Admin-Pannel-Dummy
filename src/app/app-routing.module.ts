@@ -12,8 +12,8 @@ import { ChangPasswordComponent } from './layout/chang-password/chang-password.c
 import { UserManagementComponent } from './layout/user-management/user-management.component';
 import { SettingsComponent } from './layout/settings/settings.component';
 import { ContentManagementComponent } from './layout/content-management/content-management.component';
-import { BodysystemComponent } from './layout/bodysystem/bodysystem.component';
 import { VerifyOtpComponent } from './shared/verify-otp/verify-otp.component';
+import { ProfessionalManagementComponent } from './layout/professional-management/professional-management.component';
 
 
 
@@ -33,8 +33,7 @@ const routes: Routes = [
   {path: 'change-password', component: ChangPasswordComponent, canActivate: [AuthGuard]},
   {path: 'setting', component: SettingsComponent, canActivate: [AuthGuard]},
   { path: 'user-management', component: UserManagementComponent, canActivate: [AuthGuard]},
-  { path: 'body system', component: BodysystemComponent, canActivate: [AuthGuard] },
-
+  { path: 'professional-management', component: ProfessionalManagementComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

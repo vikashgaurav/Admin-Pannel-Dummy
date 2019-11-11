@@ -79,5 +79,17 @@ export class HttpService {
   getcontent(){
     return this.http.get('admin/getcontent')
   }
-  
+
+  //get professional
+  getProfessionalList() {
+    return this.http.get('admin/professionalList');
+  }
+
+  deleteProfessional(data) {
+    return this.http.post('admin/deleteProfessional', data);
+  }
+
+  blockProfessional(data) {
+    return this.http.post('admin/blockProfessional', data);
+  }
 }

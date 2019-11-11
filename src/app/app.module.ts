@@ -35,8 +35,8 @@ import {
 import { ExcelService } from './shared/services/excel.service';
 
 import { ContentManagementComponent } from './layout/content-management/content-management.component';
-import { BodysystemComponent } from './layout/bodysystem/bodysystem.component';
 import { VerifyOtpComponent } from './shared/verify-otp/verify-otp.component';
+import { ProfessionalManagementComponent } from './layout/professional-management/professional-management.component';
 
 @NgModule({
   declarations: [
@@ -55,8 +55,8 @@ import { VerifyOtpComponent } from './shared/verify-otp/verify-otp.component';
     ChangPasswordComponent,
     UserManagementComponent,
     ContentManagementComponent,
-    BodysystemComponent,
     VerifyOtpComponent,
+    ProfessionalManagementComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +65,9 @@ import { VerifyOtpComponent } from './shared/verify-otp/verify-otp.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut: 1000,
+     preventDuplicates: true}),
     CKEditorModule,
     
     MatTableModule,

@@ -47,8 +47,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layout_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./layout/user-management/user-management.component */ "./src/app/layout/user-management/user-management.component.ts");
 /* harmony import */ var _layout_settings_settings_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./layout/settings/settings.component */ "./src/app/layout/settings/settings.component.ts");
 /* harmony import */ var _layout_content_management_content_management_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./layout/content-management/content-management.component */ "./src/app/layout/content-management/content-management.component.ts");
-/* harmony import */ var _layout_bodysystem_bodysystem_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./layout/bodysystem/bodysystem.component */ "./src/app/layout/bodysystem/bodysystem.component.ts");
-/* harmony import */ var _shared_verify_otp_verify_otp_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./shared/verify-otp/verify-otp.component */ "./src/app/shared/verify-otp/verify-otp.component.ts");
+/* harmony import */ var _shared_verify_otp_verify_otp_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./shared/verify-otp/verify-otp.component */ "./src/app/shared/verify-otp/verify-otp.component.ts");
+/* harmony import */ var _layout_professional_management_professional_management_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./layout/professional-management/professional-management.component */ "./src/app/layout/professional-management/professional-management.component.ts");
 /* harmony import */ var _shared_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./shared/services/auth.guard.service */ "./src/app/shared/services/auth.guard.service.ts");
 
 
@@ -71,7 +71,7 @@ var routes = [
     { path: '', component: _shared_login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"] },
     { path: 'login', component: _shared_login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"] },
     { path: 'forgot-password', component: _shared_forgot_password_forgot_password_component__WEBPACK_IMPORTED_MODULE_4__["ForgotPasswordComponent"] },
-    { path: 'VerifyOtp', component: _shared_verify_otp_verify_otp_component__WEBPACK_IMPORTED_MODULE_15__["VerifyOtpComponent"] },
+    { path: 'VerifyOtp', component: _shared_verify_otp_verify_otp_component__WEBPACK_IMPORTED_MODULE_14__["VerifyOtpComponent"] },
     { path: 'reset-password', component: _shared_reset_password_reset_password_component__WEBPACK_IMPORTED_MODULE_5__["ResetPasswordComponent"] },
     { path: 'content_management', component: _layout_content_management_content_management_component__WEBPACK_IMPORTED_MODULE_13__["ContentManagementComponent"] },
     { path: 'dashboard', component: _layout_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_6__["DashboardComponent"], canActivate: [_shared_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
@@ -81,7 +81,7 @@ var routes = [
     { path: 'change-password', component: _layout_chang_password_chang_password_component__WEBPACK_IMPORTED_MODULE_10__["ChangPasswordComponent"], canActivate: [_shared_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
     { path: 'setting', component: _layout_settings_settings_component__WEBPACK_IMPORTED_MODULE_12__["SettingsComponent"], canActivate: [_shared_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
     { path: 'user-management', component: _layout_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_11__["UserManagementComponent"], canActivate: [_shared_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
-    { path: 'body system', component: _layout_bodysystem_bodysystem_component__WEBPACK_IMPORTED_MODULE_14__["BodysystemComponent"], canActivate: [_shared_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
+    { path: 'professional-management', component: _layout_professional_management_professional_management_component__WEBPACK_IMPORTED_MODULE_15__["ProfessionalManagementComponent"], canActivate: [_shared_services_auth_guard_service__WEBPACK_IMPORTED_MODULE_16__["AuthGuard"]] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -190,8 +190,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _shared_services_excel_service__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./shared/services/excel.service */ "./src/app/shared/services/excel.service.ts");
 /* harmony import */ var _layout_content_management_content_management_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./layout/content-management/content-management.component */ "./src/app/layout/content-management/content-management.component.ts");
-/* harmony import */ var _layout_bodysystem_bodysystem_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./layout/bodysystem/bodysystem.component */ "./src/app/layout/bodysystem/bodysystem.component.ts");
-/* harmony import */ var _shared_verify_otp_verify_otp_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./shared/verify-otp/verify-otp.component */ "./src/app/shared/verify-otp/verify-otp.component.ts");
+/* harmony import */ var _shared_verify_otp_verify_otp_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./shared/verify-otp/verify-otp.component */ "./src/app/shared/verify-otp/verify-otp.component.ts");
+/* harmony import */ var _layout_professional_management_professional_management_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./layout/professional-management/professional-management.component */ "./src/app/layout/professional-management/professional-management.component.ts");
 
 
 
@@ -243,8 +243,8 @@ var AppModule = /** @class */ (function () {
                 _layout_chang_password_chang_password_component__WEBPACK_IMPORTED_MODULE_16__["ChangPasswordComponent"],
                 _layout_user_management_user_management_component__WEBPACK_IMPORTED_MODULE_17__["UserManagementComponent"],
                 _layout_content_management_content_management_component__WEBPACK_IMPORTED_MODULE_26__["ContentManagementComponent"],
-                _layout_bodysystem_bodysystem_component__WEBPACK_IMPORTED_MODULE_27__["BodysystemComponent"],
-                _shared_verify_otp_verify_otp_component__WEBPACK_IMPORTED_MODULE_28__["VerifyOtpComponent"],
+                _shared_verify_otp_verify_otp_component__WEBPACK_IMPORTED_MODULE_27__["VerifyOtpComponent"],
+                _layout_professional_management_professional_management_component__WEBPACK_IMPORTED_MODULE_28__["ProfessionalManagementComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -253,7 +253,10 @@ var AppModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_18__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_18__["ReactiveFormsModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_21__["HttpClientModule"],
-                ngx_toastr__WEBPACK_IMPORTED_MODULE_20__["ToastrModule"].forRoot(),
+                ngx_toastr__WEBPACK_IMPORTED_MODULE_20__["ToastrModule"].forRoot({
+                    timeOut: 1000,
+                    preventDuplicates: true
+                }),
                 ngx_ckeditor__WEBPACK_IMPORTED_MODULE_23__["CKEditorModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatTableModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_24__["MatPaginatorModule"]
@@ -455,7 +458,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"layout-sidebar\">\n  <div class=\"layout-sidebar-backdrop\"></div>\n  <div class=\"layout-sidebar-body\">\n    <div class=\"custom-scrollbar\">\n      <nav id=\"sidenav\" class=\"sidenav-collapse collapse\">\n        <ul class=\"sidenav\">\n          <li class=\"sidenav-heading\">Navigation</li>\n          <li class=\"sidenav-item dashboardPageNav\" routerLinkActive='active'>\n            <a routerLink=\"/dashboard\" aria-haspopup=\"true\">\n              <span class=\"sidenav-icon icon icon-home\"></span>\n              <span class=\"sidenav-label\">Dashboard</span>\n            </a>\n          </li>\n           <li class=\"sidenav-item subadminPageNav\" routerLinkActive='active'>\n              <a routerLink=\"/user-management\" aria-haspopup=\"true\">\n                <span class=\"sidenav-icon icon icon-users\"></span>\n                <span class=\"sidenav-label\">User Management</span>\n              </a>\n          </li> \n          <!-- <li class=\"sidenav-item subadminPageNav\" routerLinkActive='active'>\n            <a routerLink=\"/content_management\" aria-haspopup=\"true\">\n              <span class=\"sidenav-icon icon icon-users\"></span>\n              <span class=\"sidenav-label\">Content Management</span>\n            </a>\n          </li>\n\n          \n          <li class=\"reportsPageNav\" routerLinkActive='active'>\n              <a routerLink=\"/reports\" aria-haspopup=\"true\">\n                <span class=\"sidenav-icon icon icon-list\"></span>\n                <span class=\"sidenav-label\">Report Generation</span>\n              </a>\n          </li>\n          <li class=\"sidenav-item settingsPageNav\" routerLinkActive='active'>\n              <a routerLink=\"/setting\" aria-haspopup=\"true\">\n                <span class=\"sidenav-icon icon icon-cog\"></span>\n                <span class=\"sidenav-label\">Settings</span>\n              </a>\n          </li> -->\n      </ul>\n      </nav>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"layout-sidebar\">\n  <div class=\"layout-sidebar-backdrop\"></div>\n  <div class=\"layout-sidebar-body\">\n    <div class=\"custom-scrollbar\">\n      <nav id=\"sidenav\" class=\"sidenav-collapse collapse\">\n        <ul class=\"sidenav\">\n          <li class=\"sidenav-heading\">Navigation</li>\n          <li class=\"sidenav-item dashboardPageNav\" routerLinkActive='active'>\n            <a routerLink=\"/dashboard\" aria-haspopup=\"true\">\n              <span class=\"sidenav-icon icon icon-home\"></span>\n              <span class=\"sidenav-label\">Dashboard</span>\n            </a>\n          </li>\n           <li class=\"sidenav-item subadminPageNav\" routerLinkActive='active'>\n              <a routerLink=\"/user-management\" aria-haspopup=\"true\">\n                <span class=\"sidenav-icon icon icon-users\"></span>\n                <span class=\"sidenav-label\">User Management</span>\n              </a>\n          </li> \n          <li class=\"sidenav-item subadminPageNav\" routerLinkActive='active'>\n            <a routerLink=\"/professional-management\" aria-haspopup=\"true\">\n              <span class=\"sidenav-icon icon icon-users\"></span>\n              <span class=\"sidenav-label\">Professional Management</span>\n            </a>\n          </li>\n          <!-- <li class=\"sidenav-item subadminPageNav\" routerLinkActive='active'>\n            <a routerLink=\"/content_management\" aria-haspopup=\"true\">\n              <span class=\"sidenav-icon icon icon-users\"></span>\n              <span class=\"sidenav-label\">Content Management</span>\n            </a>\n          </li>\n\n\n         \n          \n          <li class=\"reportsPageNav\" routerLinkActive='active'>\n              <a routerLink=\"/reports\" aria-haspopup=\"true\">\n                <span class=\"sidenav-icon icon icon-list\"></span>\n                <span class=\"sidenav-label\">Report Generation</span>\n              </a>\n          </li>\n          <li class=\"sidenav-item settingsPageNav\" routerLinkActive='active'>\n              <a routerLink=\"/setting\" aria-haspopup=\"true\">\n                <span class=\"sidenav-icon icon icon-cog\"></span>\n                <span class=\"sidenav-label\">Settings</span>\n              </a>\n          </li> -->\n      </ul>\n      </nav>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -531,75 +534,6 @@ var LeftSidebarComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], LeftSidebarComponent);
     return LeftSidebarComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/layout/bodysystem/bodysystem.component.css":
-/*!************************************************************!*\
-  !*** ./src/app/layout/bodysystem/bodysystem.component.css ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "table {\n    width: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGF5b3V0L2JvZHlzeXN0ZW0vYm9keXN5c3RlbS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksV0FBVztBQUNmIiwiZmlsZSI6InNyYy9hcHAvbGF5b3V0L2JvZHlzeXN0ZW0vYm9keXN5c3RlbS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsidGFibGUge1xuICAgIHdpZHRoOiAxMDAlO1xufSJdfQ== */"
-
-/***/ }),
-
-/***/ "./src/app/layout/bodysystem/bodysystem.component.html":
-/*!*************************************************************!*\
-  !*** ./src/app/layout/bodysystem/bodysystem.component.html ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<app-header></app-header>\n\n<div class=\"layout-main\">\n  <app-left-sidebar></app-left-sidebar>\n  <div class=\"subadminPage\"></div>\n  <div class=\"sellerListPage ExplorerListPage\">\n    <div class=\"layout-content\">\n      <div class=\"layout-content-body\">\n        <div class=\"title-bar\">\n          <h1 class=\"title-bar-title\">\n            <span class=\"d-ib\">Ailment</span>\n          </h1>\n        </div>\n        <div class=\"row gutter-xs\">\n          <div class=\"col-xs-12\">\n            <div class=\"card\">\n              <div class=\"card-header\">\n                <div class=\"card-actions\">\n                  <!-- <button type=\"button\" class=\"card-action card-toggler\" title=\"Collapse\"></button>\n                              <button type=\"button\" class=\"card-action card-reload\" title=\"Reload\"></button> -->\n\n                </div>\n                <strong>Ailment List</strong>\n              </div>\n              <div class=\"card-body\">\n                <div class=\"row\" style=\"margin-bottom: 10px;\">\n                  <div class=\"col-md-9\">\n\n                  </div>\n                  <div class=\"col-md-3\">\n                    <input class=\"form-control\" (keyup)=\"applyFilter($event.target.value)\" type=\"search\" placeholder=\"search...\" />\n                    <!-- <div class=\"xsl\">\n                              <button class=\"btn btn-info btn-sm btn-labeled f-16\" type=\"button\" data-toggle=\"modal\" data-target=\"#addUser\" (click)=\"addNewEmployee()\">\n                                Add Employee\n                              </button>\n                            </div> -->\n                  </div>\n                </div>\n\n                <table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-elevation-z8\">\n                  <!-- Position Column -->\n                  <ng-container matColumnDef=\"position\">\n                    <th mat-header-cell *matHeaderCellDef mat-sort-header> S. No. </th>\n                    <!-- <td mat-cell *matCellDef=\"let element; let i = index\"> {{i+1}} </td> -->\n                  </ng-container>\n\n                  <ng-container matColumnDef=\"name\">\n                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Email ID </th>\n                    <!-- <td mat-cell *matCellDef=\"let element\"> {{element.email_id}}</td> -->\n                  </ng-container>\n\n                  <!-- Name Column -->\n                  <ng-container matColumnDef=\"description\">\n                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n                    <!-- <td mat-cell *matCellDef=\"let element\"> {{element.first_Name}} {{element.last_name}}</td> -->\n                  </ng-container>\n\n                  <!-- Weight Column -->\n                  <ng-container matColumnDef=\"supporting_product\">\n                    <th mat-header-cell *matHeaderCellDef> User ID </th>\n                    <!-- <td mat-cell *matCellDef=\"let element\"> {{element.unique_id}} </td> -->\n                  </ng-container>\n\n                  <!-- Symbol Column -->\n                  <ng-container matColumnDef=\"body_system\">\n                    <th mat-header-cell *matHeaderCellDef> Refer ID. </th>\n                    <!-- <td mat-cell *matCellDef=\"let element\"> {{element.refercode}} </td> -->\n                  </ng-container>\n\n                  <!-- <ng-container matColumnDef=\"country\">\n                    <th mat-header-cell *matHeaderCellDef> Country </th>\n                    <td mat-cell *matCellDef=\"let element\"> {{element.is_country}} </td>\n                  </ng-container>\n\n                  <ng-container matColumnDef=\"status\">\n                    <th mat-header-cell *matHeaderCellDef> Status </th>\n                    <td mat-cell *matCellDef=\"let element\"><span [ngClass]=\"{'text-danger': element.is_blocked, 'text-success': !element.is_blocked}\">\n                        {{element.is_blocked ? \"Blocked\" : \"Unblocked\"}} </span></td>\n                  </ng-container> -->\n\n                  <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef> Action </th>\n                    <td mat-cell *matCellDef=\"let element\">\n                      <!-- <button class=\"btn btn-success btn-sm btn-labeled\" type=\"button\" data-toggle=\"modal\" data-target=\"#addUser\" (click)=\"selectEditUser(element)\">\n                                    <span class=\"btn-label\">\n                                    <i class=\"fa fa-edit icon-lg icon-fw\" aria-hidden=\"true\"></i>\n                                    </span>\n                                    Edit\n                                </button> -->\n                      <button class=\"btn btn-sm btn-labeled\" [ngClass]=\"{'btn-info': element.is_block, 'btn-warning': !element.is_block}\"\n                        type=\"button\" data-toggle=\"modal\" data-target=\"#blockUser\" (click)=\"selectBlockUser(element)\">\n                        <span class=\"btn-label\">\n                          <i class=\"fa fa-ban f-16\" aria-hidden=\"true\"></i>\n                        </span>\n                        {{element.is_blocked ? 'Unblock' : 'Block'}}\n                      </button>\n                      <button class=\"btn btn-danger btn-sm btn-labeled\" type=\"button\" data-toggle=\"modal\" data-target=\"#deleteUser\"\n                        (click)=\"selectDeleteUser(element)\">\n                        <span class=\"btn-label\">\n                          <i class=\"fa fa-trash icon-lg icon-fw\"></i>\n                        </span>\n                        Delete\n                      </button>\n                      <!-- <label class=\"switch\">\n                                    <input type=\"checkbox\" checked>\n                                    <span class=\"slider round\"></span>\n                                </label> -->\n                    </td>\n                  </ng-container>\n\n                  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <mat-paginator [pageSizeOptions]=\"[10, 20, 30]\" showFirstLastButtons></mat-paginator>\n              </div>\n            </div>\n          </div>\n        </div>\n\n      </div>\n    </div>\n  </div>\n  <app-footer></app-footer>"
-
-/***/ }),
-
-/***/ "./src/app/layout/bodysystem/bodysystem.component.ts":
-/*!***********************************************************!*\
-  !*** ./src/app/layout/bodysystem/bodysystem.component.ts ***!
-  \***********************************************************/
-/*! exports provided: BodysystemComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BodysystemComponent", function() { return BodysystemComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-
-
-
-var BodysystemComponent = /** @class */ (function () {
-    function BodysystemComponent() {
-        this.displayedColumns = ['position', 'name', 'description', 'supporting_product', 'body_system', 'action'];
-        this.Userlist = [];
-        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableDataSource"](this.Userlist);
-    }
-    BodysystemComponent.prototype.ngOnInit = function () {
-    };
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginator"])
-    ], BodysystemComponent.prototype, "paginator", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSort"]),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSort"])
-    ], BodysystemComponent.prototype, "sort", void 0);
-    BodysystemComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-bodysystem',
-            template: __webpack_require__(/*! ./bodysystem.component.html */ "./src/app/layout/bodysystem/bodysystem.component.html"),
-            styles: [__webpack_require__(/*! ./bodysystem.component.css */ "./src/app/layout/bodysystem/bodysystem.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], BodysystemComponent);
-    return BodysystemComponent;
 }());
 
 
@@ -1128,6 +1062,164 @@ var EditProfileComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/layout/professional-management/professional-management.component.css":
+/*!**************************************************************************************!*\
+  !*** ./src/app/layout/professional-management/professional-management.component.css ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "table {\n    width: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGF5b3V0L3Byb2Zlc3Npb25hbC1tYW5hZ2VtZW50L3Byb2Zlc3Npb25hbC1tYW5hZ2VtZW50LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0FBQ2YiLCJmaWxlIjoic3JjL2FwcC9sYXlvdXQvcHJvZmVzc2lvbmFsLW1hbmFnZW1lbnQvcHJvZmVzc2lvbmFsLW1hbmFnZW1lbnQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbInRhYmxlIHtcbiAgICB3aWR0aDogMTAwJTtcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/layout/professional-management/professional-management.component.html":
+/*!***************************************************************************************!*\
+  !*** ./src/app/layout/professional-management/professional-management.component.html ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<app-header></app-header>\n\n<div class=\"layout-main\">\n  <app-left-sidebar></app-left-sidebar>\n  <div class=\"subadminPage\"></div>\n  <div class=\"sellerListPage ExplorerListPage\">\n    <div class=\"layout-content\">\n      <div class=\"layout-content-body\">\n        <div class=\"title-bar\">\n          <h1 class=\"title-bar-title\">\n            <span class=\"d-ib\">User Management</span>\n          </h1>\n        </div>\n        <div class=\"row gutter-xs\">\n          <div class=\"col-xs-12\">\n            <div class=\"card\">\n              <div class=\"card-header\">\n                <div class=\"card-actions\">\n                  <!-- <button type=\"button\" class=\"card-action card-toggler\" title=\"Collapse\"></button>\n                              <button type=\"button\" class=\"card-action card-reload\" title=\"Reload\"></button> -->\n\n                </div>\n                <strong>User List</strong>\n              </div>\n              <div class=\"card-body\">\n                <div class=\"row\" style=\"margin-bottom: 10px;\">\n                  <div class=\"col-md-9\">\n                    <!-- <button (click)=\"exportAsXLSX()\"><i class=\"fa fa-file-excel-o\" style=\"font-size:48px;color:blue\"></i></button> -->\n                  </div>\n                  <div class=\"col-md-3\">\n                    <input class=\"form-control\" (keyup)=\"applyFilter($event.target.value)\" type=\"search\" placeholder=\"search...\" />\n                    <!-- <div class=\"xsl\">\n                              <button class=\"btn btn-info btn-sm btn-labeled f-16\" type=\"button\" data-toggle=\"modal\" data-target=\"#addUser\" (click)=\"addNewEmployee()\">\n                                Add Employee\n                              </button>\n                            </div> -->\n                  </div>\n                </div>\n\n                <table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-elevation-z8\">\n                  <!-- Position Column -->\n                  <ng-container matColumnDef=\"position\">\n                    <th mat-header-cell *matHeaderCellDef mat-sort-header> S. No. </th>\n                    <td mat-cell *matCellDef=\"let element; let i = index\"> {{i+1}} </td>\n                  </ng-container>\n\n                  <ng-container matColumnDef=\"empid\">\n                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Email ID </th>\n                    <td mat-cell *matCellDef=\"let element\"> {{element.email_id}}</td>\n                  </ng-container>\n\n                  <!-- Name Column -->\n                  <ng-container matColumnDef=\"name\">\n                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n                    <td mat-cell *matCellDef=\"let element\"> {{element.full_name}}</td>\n                  </ng-container>\n\n\n\n                  <ng-container matColumnDef=\"mobile\">\n                    <th mat-header-cell *matHeaderCellDef> Mobile No. </th>\n                    <td mat-cell *matCellDef=\"let element\"> {{element.country_code}}{{element.mobile_number}} </td>\n                  </ng-container>\n\n                  <ng-container matColumnDef=\"status\">\n                    <th mat-header-cell *matHeaderCellDef> Status </th>\n                    <td mat-cell *matCellDef=\"let element\"><span [ngClass]=\"{'text-danger': element.is_blocked, 'text-success': !element.is_blocked}\">\n                        {{element.is_blocked ? \"Blocked\" : \"Unblocked\"}} </span></td>\n                  </ng-container>\n\n                  <ng-container matColumnDef=\"created_on\">\n                    <th mat-header-cell *matHeaderCellDef> Created At </th>\n                    <td mat-cell *matCellDef=\"let element\"> {{(element.created_on)*1000 | date}} </td>\n                  </ng-container>\n\n\n                  <ng-container matColumnDef=\"action\">\n                    <th mat-header-cell *matHeaderCellDef> Action </th>\n                    <td mat-cell *matCellDef=\"let element\">\n                      <!-- <button class=\"btn btn-success btn-sm btn-labeled\" type=\"button\" data-toggle=\"modal\" data-target=\"#addUser\" (click)=\"selectEditUser(element)\">\n                                    <span class=\"btn-label\">\n                                    <i class=\"fa fa-edit icon-lg icon-fw\" aria-hidden=\"true\"></i>\n                                    </span>\n                                    Edit\n                                </button> -->\n                      <button class=\"btn btn-sm btn-labeled\" [ngClass]=\"{'btn-info': element.is_block, 'btn-warning': !element.is_block}\"\n                        type=\"button\" data-toggle=\"modal\" data-target=\"#blockUser\" (click)=\"selectBlockUser(element)\">\n                        <span class=\"btn-label\">\n                          <i class=\"fa fa-ban f-16\" aria-hidden=\"true\"></i>\n                        </span>\n                        {{element.is_blocked ? 'Unblock' : 'Block'}}\n                      </button>\n                      <button class=\"btn btn-danger btn-sm btn-labeled\" type=\"button\" data-toggle=\"modal\" data-target=\"#deleteUser\"\n                        (click)=\"selectDeleteUser(element)\">\n                        <span class=\"btn-label\">\n                          <i class=\"fa fa-trash icon-lg icon-fw\"></i>\n                        </span>\n                        Delete\n                      </button>\n\n                    </td>\n                  </ng-container>\n\n                  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                </table>\n                <mat-paginator [pageSizeOptions]=\"[10, 20, 30]\" showFirstLastButtons></mat-paginator>\n              </div>\n            </div>\n          </div>\n        </div>\n\n      </div>\n    </div>\n  </div>\n  <app-footer></app-footer>\n  <!-----  Modal Block   ---->\n  <div id=\"blockUser\" tabindex=\"-1\" role=\"dialog\" class=\"modal fade\">\n    <div class=\"modal-dialog modal-sm\">\n      <div class=\"modal-content\">\n        <div class=\"modal-body\">\n          <div class=\"text-center\">\n            <h4 style=\"color:  #c90101;\">Are you sure you want to {{selectedBlockUser?.is_block ? 'unblock' : 'block'}}\n              this user?</h4>\n            <div class=\"m-t-lg\">\n              <button class=\"btn btn-danger\" data-dismiss=\"modal\" type=\"button\" (click)=\"blockUser()\">Yes</button>\n              <button class=\"btn btn-success\" data-dismiss=\"modal\" type=\"button\">No</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-----  Modal Block   ---->\n  <!-- Modal Block Confirm-->\n  <div class=\"modal fade\" id=\"deleted-me\">\n    <div class=\"modal-dialog modal-sm\" data-dismiss=\"modal\">\n      <div class=\"modal-content\">\n        <div class=\"modal-body\" style=\"text-align: center;\">\n          <h4 style=\"color:  #c90101;\">Blocked Successfully !</h4>\n          <div class=\"successful-icon\" style=\"color:  #c90101;\">\n            <i class=\"fa fa-check-square\"></i>\n          </div>\n        </div>\n\n      </div>\n    </div>\n  </div>\n  <!-- Modal Block Confirm-->\n\n  <!-----  Modal DELETE   ---->\n  <div id=\"deleteUser\" tabindex=\"-1\" role=\"dialog\" class=\"modal fade\">\n    <div class=\"modal-dialog modal-sm\">\n      <div class=\"modal-content\">\n        <div class=\"modal-body\">\n          <div class=\"text-center\">\n            <h4 style=\"color:  #c90101;\">Are you sure you want to delete this Professional?</h4>\n            <div class=\"m-t-lg\">\n              <button class=\"btn btn-danger\" data-dismiss=\"modal\" type=\"button\" (click)=\"deleteUser()\">Yes</button>\n              <button class=\"btn btn-success\" data-dismiss=\"modal\" type=\"button\">No</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n\n  <div class=\"modal fade\" id=\"deleted-me\">\n    <div class=\"modal-dialog modal-sm\" data-dismiss=\"modal\">\n      <div class=\"modal-content\">\n        <div class=\"modal-body\" style=\"text-align: center;\">\n          <h4 style=\"color:  #c90101;\">Deleted Successfully !</h4>\n          <div class=\"successful-icon\" style=\"color:  #c90101;\">\n            <i class=\"fa fa-check-square\"></i>\n          </div>\n        </div>\n\n      </div>\n    </div>\n  </div>"
+
+/***/ }),
+
+/***/ "./src/app/layout/professional-management/professional-management.component.ts":
+/*!*************************************************************************************!*\
+  !*** ./src/app/layout/professional-management/professional-management.component.ts ***!
+  \*************************************************************************************/
+/*! exports provided: ProfessionalManagementComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfessionalManagementComponent", function() { return ProfessionalManagementComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _shared_services_http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../shared/services/http.service */ "./src/app/shared/services/http.service.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _shared_services_utils_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../shared/services/utils.service */ "./src/app/shared/services/utils.service.ts");
+/* harmony import */ var _shared_services_excel_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../shared/services/excel.service */ "./src/app/shared/services/excel.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
+
+
+
+
+
+
+
+
+var ProfessionalManagementComponent = /** @class */ (function () {
+    function ProfessionalManagementComponent(api, fb, utils, router, excelService) {
+        this.api = api;
+        this.utils = utils;
+        this.router = router;
+        this.excelService = excelService;
+        this.displayedColumns = ['position', 'empid', 'name', 'status', 'mobile', 'created_on', 'action'];
+        this.Userlist = [];
+        this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTableDataSource"](this.Userlist);
+        this.updateUser = false;
+        this.submitted = false;
+        this.environment = src_environments_environment__WEBPACK_IMPORTED_MODULE_8__["environment"];
+    }
+    ProfessionalManagementComponent.prototype.ngOnInit = function () {
+        this.getEmployeeList();
+        $(".profile-img").change(function (e) {
+            var img = e.target.files[0];
+            if (!iEdit.open(img, true, function (res) {
+                $(".result").attr("src", res);
+            })) {
+                alert("Whoops! That is not an image!");
+            }
+        });
+    };
+    ProfessionalManagementComponent.prototype.getEmployeeList = function () {
+        var _this = this;
+        this.api.getProfessionalList().subscribe(function (data) {
+            _this.Userlist = data['response'];
+            console.log(data);
+            _this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTableDataSource"](_this.Userlist);
+            setTimeout(function () {
+                _this.dataSource.paginator = _this.paginator;
+                _this.dataSource.sort = _this.sort;
+            }, 500);
+        }, function (error) {
+            console.log(error);
+            _this.utils.alert('error', error['error']['message']);
+            if (error['status'] == 400) {
+                _this.router.navigate(['/login']);
+                _this.utils.removeData('appcrowd_admin_data');
+            }
+            debugger;
+        });
+    };
+    ProfessionalManagementComponent.prototype.selectDeleteUser = function (user) {
+        debugger;
+        this.selectedDeleteUser = user;
+    };
+    ProfessionalManagementComponent.prototype.deleteUser = function () {
+        var _this = this;
+        var dataToSend = {
+            id: this.selectedDeleteUser._id
+        };
+        this.api.deleteProfessional(dataToSend).subscribe(function (data) {
+            _this.utils.alert('success', data['message']);
+            _this.getEmployeeList();
+        }, function (error) {
+            console.log(error);
+            debugger;
+        });
+    };
+    ProfessionalManagementComponent.prototype.selectBlockUser = function (user) {
+        this.selectedBlockUser = user;
+    };
+    ProfessionalManagementComponent.prototype.blockUser = function () {
+        var _this = this;
+        debugger;
+        var dataToSend = {
+            id: this.selectedBlockUser._id,
+            is_blocked: !this.selectedBlockUser.is_blocked
+        };
+        this.api.blockProfessional(dataToSend).subscribe(function (data) {
+            _this.utils.alert('success', data['message']);
+            _this.getEmployeeList();
+        }, function (error) {
+            console.log(error);
+            debugger;
+        });
+    };
+    ProfessionalManagementComponent.prototype.applyFilter = function (filterValue) {
+        this.dataSource.filter = filterValue.trim().toLowerCase();
+    };
+    ProfessionalManagementComponent.prototype.exportAsXLSX = function () {
+        this.excelService.exportAsExcelFile(this.Userlist, 'sample');
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatPaginator"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatPaginator"])
+    ], ProfessionalManagementComponent.prototype, "paginator", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSort"]),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSort"])
+    ], ProfessionalManagementComponent.prototype, "sort", void 0);
+    ProfessionalManagementComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-professional-management',
+            template: __webpack_require__(/*! ./professional-management.component.html */ "./src/app/layout/professional-management/professional-management.component.html"),
+            styles: [__webpack_require__(/*! ./professional-management.component.css */ "./src/app/layout/professional-management/professional-management.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_shared_services_http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"], _shared_services_utils_service__WEBPACK_IMPORTED_MODULE_5__["UtilsService"], _angular_router__WEBPACK_IMPORTED_MODULE_7__["Router"], _shared_services_excel_service__WEBPACK_IMPORTED_MODULE_6__["ExcelService"]])
+    ], ProfessionalManagementComponent);
+    return ProfessionalManagementComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/layout/profile/profile.component.css":
 /*!******************************************************!*\
   !*** ./src/app/layout/profile/profile.component.css ***!
@@ -1462,7 +1554,7 @@ module.exports = "table {\n    width: 100%;\n}\n/*# sourceMappingURL=data:applic
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-header></app-header>\n\n<div class=\"layout-main\">\n<app-left-sidebar></app-left-sidebar>\n<div class=\"subadminPage\"></div>\n<div class=\"sellerListPage ExplorerListPage\">\n  <div class=\"layout-content\">\n      <div class=\"layout-content-body\">\n          <div class=\"title-bar\">\n              <h1 class=\"title-bar-title\">\n                <span class=\"d-ib\">User Management</span>\n              </h1>\n          </div>\n          <div class=\"row gutter-xs\">\n              <div class=\"col-xs-12\">\n                  <div class=\"card\">\n                      <div class=\"card-header\">\n                          <div class=\"card-actions\">\n                              <!-- <button type=\"button\" class=\"card-action card-toggler\" title=\"Collapse\"></button>\n                              <button type=\"button\" class=\"card-action card-reload\" title=\"Reload\"></button> -->\n                              \n                          </div>\n                          <strong>User List</strong>\n                      </div>\n                      <div class=\"card-body\">\n                        <div class=\"row\" style=\"margin-bottom: 10px;\">\n                          <div class=\"col-md-9\">\n                          <!-- <button (click)=\"exportAsXLSX()\"><i class=\"fa fa-file-excel-o\" style=\"font-size:48px;color:blue\"></i></button> -->\n                          </div>\n                          <div class=\"col-md-3\">\n                            <input class=\"form-control\" (keyup)=\"applyFilter($event.target.value)\" type=\"search\" placeholder=\"search...\" />\n                            <!-- <div class=\"xsl\">\n                              <button class=\"btn btn-info btn-sm btn-labeled f-16\" type=\"button\" data-toggle=\"modal\" data-target=\"#addUser\" (click)=\"addNewEmployee()\">\n                                Add Employee\n                              </button>\n                            </div> -->\n                          </div>\n                        </div>\n\n                          <table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-elevation-z8\">\n                            <!-- Position Column -->\n                            <ng-container matColumnDef=\"position\">\n                              <th mat-header-cell *matHeaderCellDef mat-sort-header> S. No. </th>\n                              <td mat-cell *matCellDef=\"let element; let i = index\"> {{i+1}} </td>\n                            </ng-container>\n                          \n                            <ng-container matColumnDef=\"empid\">\n                              <th mat-header-cell *matHeaderCellDef mat-sort-header> Email ID </th>\n                              <td mat-cell *matCellDef=\"let element\"> {{element.email_id}}</td>\n                            </ng-container>\n                            \n                            <!-- Name Column -->\n                            <ng-container matColumnDef=\"name\">\n                              <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n                              <td mat-cell *matCellDef=\"let element\"> {{element.first_name}} {{element.last_name}}</td>\n                            </ng-container>\n                          \n                           \n\n                            <ng-container matColumnDef=\"mobile\">\n                              <th mat-header-cell *matHeaderCellDef> Mobile No. </th>\n                              <td mat-cell *matCellDef=\"let element\"> {{element.country_code}}{{element.mobile_number}} </td>\n                            </ng-container>\n\n                            <ng-container matColumnDef=\"status\">\n                              <th mat-header-cell *matHeaderCellDef> Status </th>\n                              <td mat-cell *matCellDef=\"let element\"><span [ngClass]=\"{'text-danger': element.is_blocked, 'text-success': !element.is_blocked}\"> {{element.is_blocked ? \"Blocked\" : \"Unblocked\"}} </span></td>\n                            </ng-container>\n\n                            <ng-container matColumnDef=\"created_on\">\n                              <th mat-header-cell *matHeaderCellDef> Created At </th>\n                              <td mat-cell *matCellDef=\"let element\"> {{(element.created_on)*1000 | date}} </td>\n                            </ng-container>\n                            \n\n                            <ng-container matColumnDef=\"action\">\n                              <th mat-header-cell *matHeaderCellDef> Action </th>\n                              <td mat-cell *matCellDef=\"let element\">\n                                <!-- <button class=\"btn btn-success btn-sm btn-labeled\" type=\"button\" data-toggle=\"modal\" data-target=\"#addUser\" (click)=\"selectEditUser(element)\">\n                                    <span class=\"btn-label\">\n                                    <i class=\"fa fa-edit icon-lg icon-fw\" aria-hidden=\"true\"></i>\n                                    </span>\n                                    Edit\n                                </button> -->\n                                <button class=\"btn btn-sm btn-labeled\" [ngClass]=\"{'btn-info': element.is_block, 'btn-warning': !element.is_block}\" type=\"button\" data-toggle=\"modal\" data-target=\"#blockUser\" (click)=\"selectBlockUser(element)\">\n                                    <span class=\"btn-label\">\n                                        <i class=\"fa fa-ban f-16\" aria-hidden=\"true\"></i>\n                                    </span>\n                                    {{element.is_blocked ? 'Unblock' : 'Block'}}\n                                </button>\n                                <button class=\"btn btn-danger btn-sm btn-labeled\" type=\"button\" data-toggle=\"modal\" data-target=\"#deleteUser\" (click)=\"selectDeleteUser(element)\">\n                                    <span class=\"btn-label\">\n                                        <i  class=\"fa fa-trash icon-lg icon-fw\"></i>\n                                    </span>\n                                    Delete\n                                </button>\n                                <!-- <label class=\"switch\">\n                                    <input type=\"checkbox\" checked>\n                                    <span class=\"slider round\"></span>\n                                </label> -->\n                              </td>\n                            </ng-container>\n                          \n                            <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                            <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                          </table>\n                          <mat-paginator [pageSizeOptions]=\"[10, 20, 30]\" showFirstLastButtons></mat-paginator>\n                      </div>\n                  </div>\n              </div>\n          </div>\n\n      </div>\n  </div>\n</div>\n<app-footer></app-footer>\n<!-----  Modal Block   ---->\n<div id=\"blockUser\" tabindex=\"-1\" role=\"dialog\" class=\"modal fade\">\n    <div class=\"modal-dialog modal-sm\">\n       <div class=\"modal-content\">\n         <div class=\"modal-body\">\n           <div class=\"text-center\">\n             <h4 style=\"color:  #c90101;\">Are you sure you want to {{selectedBlockUser?.is_block ? 'unblock' : 'block'}} this user?</h4>\n             <div class=\"m-t-lg\">\n               <button class=\"btn btn-danger\" data-dismiss=\"modal\" type=\"button\" (click)=\"blockUser()\">Yes</button>\n               <button class=\"btn btn-success\" data-dismiss=\"modal\" type=\"button\">No</button>\n             </div>\n           </div>\n         </div>\n       </div>\n     </div>      \n   </div>\n    <!-----  Modal Block   ---->\n             <!-- Modal Block Confirm-->\n<div class=\"modal fade\" id=\"deleted-me\">\n <div class=\"modal-dialog modal-sm\" data-dismiss=\"modal\">\n   <div class=\"modal-content\">      \n     <div class=\"modal-body\" style=\"text-align: center;\">\n       <h4 style=\"color:  #c90101;\">Blocked Successfully !</h4>\n       <div class=\"successful-icon\" style=\"color:  #c90101;\">\n       <i class=\"fa fa-check-square\"></i>\n     </div>\n     </div>\n     \n   </div>\n </div>\n</div>\n<!-- Modal Block Confirm-->\n\n    <!-----  Modal DELETE   ---->\n    <div id=\"deleteUser\" tabindex=\"-1\" role=\"dialog\" class=\"modal fade\">\n        <div class=\"modal-dialog modal-sm\">\n           <div class=\"modal-content\">\n             <div class=\"modal-body\">\n               <div class=\"text-center\">\n                 <h4 style=\"color:  #c90101;\">Are you sure you want to delete this user?</h4>\n                 <div class=\"m-t-lg\">\n                   <button class=\"btn btn-danger\" data-dismiss=\"modal\" type=\"button\" (click)=\"deleteUser()\">Yes</button>\n                   <button class=\"btn btn-success\" data-dismiss=\"modal\" type=\"button\">No</button>\n                 </div>\n               </div>\n             </div>\n           </div>\n         </div>      \n       </div>\n\n       \n   <div class=\"modal fade\" id=\"deleted-me\">\n     <div class=\"modal-dialog modal-sm\" data-dismiss=\"modal\">\n       <div class=\"modal-content\">      \n         <div class=\"modal-body\" style=\"text-align: center;\">\n           <h4 style=\"color:  #c90101;\">Deleted Successfully !</h4>\n           <div class=\"successful-icon\" style=\"color:  #c90101;\">\n           <i class=\"fa fa-check-square\"></i>\n         </div>\n         </div>\n         \n       </div>\n     </div>\n   </div>\n \n   \n   "
+module.exports = "<app-header></app-header>\n\n<div class=\"layout-main\">\n<app-left-sidebar></app-left-sidebar>\n<div class=\"subadminPage\"></div>\n<div class=\"sellerListPage ExplorerListPage\">\n  <div class=\"layout-content\">\n      <div class=\"layout-content-body\">\n          <div class=\"title-bar\">\n              <h1 class=\"title-bar-title\">\n                <span class=\"d-ib\">User Management</span>\n              </h1>\n          </div>\n          <div class=\"row gutter-xs\">\n              <div class=\"col-xs-12\">\n                  <div class=\"card\">\n                      <div class=\"card-header\">\n                          <div class=\"card-actions\">\n                              <!-- <button type=\"button\" class=\"card-action card-toggler\" title=\"Collapse\"></button>\n                              <button type=\"button\" class=\"card-action card-reload\" title=\"Reload\"></button> -->\n                              \n                          </div>\n                          <strong>User List</strong>\n                      </div>\n                      <div class=\"card-body\">\n                        <div class=\"row\" style=\"margin-bottom: 10px;\">\n                          <div class=\"col-md-9\">\n                          <!-- <button (click)=\"exportAsXLSX()\"><i class=\"fa fa-file-excel-o\" style=\"font-size:48px;color:blue\"></i></button> -->\n                          </div>\n                          <div class=\"col-md-3\">\n                            <input class=\"form-control\" (keyup)=\"applyFilter($event.target.value)\" type=\"search\" placeholder=\"search...\" />\n                            <!-- <div class=\"xsl\">\n                              <button class=\"btn btn-info btn-sm btn-labeled f-16\" type=\"button\" data-toggle=\"modal\" data-target=\"#addUser\" (click)=\"addNewEmployee()\">\n                                Add Employee\n                              </button>\n                            </div> -->\n                          </div>\n                        </div>\n\n                          <table mat-table [dataSource]=\"dataSource\" matSort class=\"mat-elevation-z8\">\n                            <!-- Position Column -->\n                            <ng-container matColumnDef=\"position\">\n                              <th mat-header-cell *matHeaderCellDef mat-sort-header> S. No. </th>\n                              <td mat-cell *matCellDef=\"let element; let i = index\"> {{i+1}} </td>\n                            </ng-container>\n                          \n                            <ng-container matColumnDef=\"empid\">\n                              <th mat-header-cell *matHeaderCellDef mat-sort-header> Email ID </th>\n                              <td mat-cell *matCellDef=\"let element\"> {{element.email_id}}</td>\n                            </ng-container>\n                            \n                            <!-- Name Column -->\n                            <ng-container matColumnDef=\"name\">\n                              <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>\n                              <td mat-cell *matCellDef=\"let element\"> {{element.full_name}}</td>\n                            </ng-container>\n                          \n                           \n\n                            <ng-container matColumnDef=\"mobile\">\n                              <th mat-header-cell *matHeaderCellDef> Mobile No. </th>\n                              <td mat-cell *matCellDef=\"let element\"> {{element.country_code}}{{element.mobile_number}} </td>\n                            </ng-container>\n\n                            <ng-container matColumnDef=\"status\">\n                              <th mat-header-cell *matHeaderCellDef> Status </th>\n                              <td mat-cell *matCellDef=\"let element\"><span [ngClass]=\"{'text-danger': element.is_blocked, 'text-success': !element.is_blocked}\"> {{element.is_blocked ? \"Blocked\" : \"Unblocked\"}} </span></td>\n                            </ng-container>\n\n                            <ng-container matColumnDef=\"created_on\">\n                              <th mat-header-cell *matHeaderCellDef> Created At </th>\n                              <td mat-cell *matCellDef=\"let element\"> {{(element.created_on)*1000 | date}} </td>\n                            </ng-container>\n                            \n\n                            <ng-container matColumnDef=\"action\">\n                              <th mat-header-cell *matHeaderCellDef> Action </th>\n                              <td mat-cell *matCellDef=\"let element\">\n                                <!-- <button class=\"btn btn-success btn-sm btn-labeled\" type=\"button\" data-toggle=\"modal\" data-target=\"#addUser\" (click)=\"selectEditUser(element)\">\n                                    <span class=\"btn-label\">\n                                    <i class=\"fa fa-edit icon-lg icon-fw\" aria-hidden=\"true\"></i>\n                                    </span>\n                                    Edit\n                                </button> -->\n                                <button class=\"btn btn-sm btn-labeled\" [ngClass]=\"{'btn-info': element.is_block, 'btn-warning': !element.is_block}\" type=\"button\" data-toggle=\"modal\" data-target=\"#blockUser\" (click)=\"selectBlockUser(element)\">\n                                    <span class=\"btn-label\">\n                                        <i class=\"fa fa-ban f-16\" aria-hidden=\"true\"></i>\n                                    </span>\n                                    {{element.is_blocked ? 'Unblock' : 'Block'}}\n                                </button>\n                                <button class=\"btn btn-danger btn-sm btn-labeled\" type=\"button\" data-toggle=\"modal\" data-target=\"#deleteUser\" (click)=\"selectDeleteUser(element)\">\n                                    <span class=\"btn-label\">\n                                        <i  class=\"fa fa-trash icon-lg icon-fw\"></i>\n                                    </span>\n                                    Delete\n                                </button>\n                               \n                              </td>\n                            </ng-container>\n                          \n                            <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n                            <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n                          </table>\n                          <mat-paginator [pageSizeOptions]=\"[10, 20, 30]\" showFirstLastButtons></mat-paginator>\n                      </div>\n                  </div>\n              </div>\n          </div>\n\n      </div>\n  </div>\n</div>\n<app-footer></app-footer>\n<!-----  Modal Block   ---->\n<div id=\"blockUser\" tabindex=\"-1\" role=\"dialog\" class=\"modal fade\">\n    <div class=\"modal-dialog modal-sm\">\n       <div class=\"modal-content\">\n         <div class=\"modal-body\">\n           <div class=\"text-center\">\n             <h4 style=\"color:  #c90101;\">Are you sure you want to {{selectedBlockUser?.is_block ? 'unblock' : 'block'}} this user?</h4>\n             <div class=\"m-t-lg\">\n               <button class=\"btn btn-danger\" data-dismiss=\"modal\" type=\"button\" (click)=\"blockUser()\">Yes</button>\n               <button class=\"btn btn-success\" data-dismiss=\"modal\" type=\"button\">No</button>\n             </div>\n           </div>\n         </div>\n       </div>\n     </div>      \n   </div>\n    <!-----  Modal Block   ---->\n             <!-- Modal Block Confirm-->\n<div class=\"modal fade\" id=\"deleted-me\">\n <div class=\"modal-dialog modal-sm\" data-dismiss=\"modal\">\n   <div class=\"modal-content\">      \n     <div class=\"modal-body\" style=\"text-align: center;\">\n       <h4 style=\"color:  #c90101;\">Blocked Successfully !</h4>\n       <div class=\"successful-icon\" style=\"color:  #c90101;\">\n       <i class=\"fa fa-check-square\"></i>\n     </div>\n     </div>\n     \n   </div>\n </div>\n</div>\n<!-- Modal Block Confirm-->\n\n    <!-----  Modal DELETE   ---->\n    <div id=\"deleteUser\" tabindex=\"-1\" role=\"dialog\" class=\"modal fade\">\n        <div class=\"modal-dialog modal-sm\">\n           <div class=\"modal-content\">\n             <div class=\"modal-body\">\n               <div class=\"text-center\">\n                 <h4 style=\"color:  #c90101;\">Are you sure you want to delete this user?</h4>\n                 <div class=\"m-t-lg\">\n                   <button class=\"btn btn-danger\" data-dismiss=\"modal\" type=\"button\" (click)=\"deleteUser()\">Yes</button>\n                   <button class=\"btn btn-success\" data-dismiss=\"modal\" type=\"button\">No</button>\n                 </div>\n               </div>\n             </div>\n           </div>\n         </div>      \n       </div>\n\n       \n   <div class=\"modal fade\" id=\"deleted-me\">\n     <div class=\"modal-dialog modal-sm\" data-dismiss=\"modal\">\n       <div class=\"modal-content\">      \n         <div class=\"modal-body\" style=\"text-align: center;\">\n           <h4 style=\"color:  #c90101;\">Deleted Successfully !</h4>\n           <div class=\"successful-icon\" style=\"color:  #c90101;\">\n           <i class=\"fa fa-check-square\"></i>\n         </div>\n         </div>\n         \n       </div>\n     </div>\n   </div>\n \n   \n   "
 
 /***/ }),
 
@@ -2155,6 +2247,16 @@ var HttpService = /** @class */ (function () {
     };
     HttpService.prototype.getcontent = function () {
         return this.http.get('admin/getcontent');
+    };
+    //get professional
+    HttpService.prototype.getProfessionalList = function () {
+        return this.http.get('admin/professionalList');
+    };
+    HttpService.prototype.deleteProfessional = function (data) {
+        return this.http.post('admin/deleteProfessional', data);
+    };
+    HttpService.prototype.blockProfessional = function (data) {
+        return this.http.post('admin/blockProfessional', data);
     };
     HttpService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
