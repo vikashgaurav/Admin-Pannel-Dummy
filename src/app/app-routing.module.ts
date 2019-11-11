@@ -14,7 +14,7 @@ import { SettingsComponent } from './layout/settings/settings.component';
 import { ContentManagementComponent } from './layout/content-management/content-management.component';
 import { VerifyOtpComponent } from './shared/verify-otp/verify-otp.component';
 import { ProfessionalManagementComponent } from './layout/professional-management/professional-management.component';
-
+import { JobCategoriesComponent } from './layout/job-categories/job-categories.component';
 
 
 import { AuthGuard } from './shared/services/auth.guard.service';
@@ -34,6 +34,7 @@ const routes: Routes = [
   {path: 'setting', component: SettingsComponent, canActivate: [AuthGuard]},
   { path: 'user-management', component: UserManagementComponent, canActivate: [AuthGuard]},
   { path: 'professional-management', component: ProfessionalManagementComponent, canActivate: [AuthGuard] },
+  { path: 'job-categorie', component: JobCategoriesComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

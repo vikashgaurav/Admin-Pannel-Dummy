@@ -37,6 +37,7 @@ import { ExcelService } from './shared/services/excel.service';
 import { ContentManagementComponent } from './layout/content-management/content-management.component';
 import { VerifyOtpComponent } from './shared/verify-otp/verify-otp.component';
 import { ProfessionalManagementComponent } from './layout/professional-management/professional-management.component';
+import { JobCategoriesComponent } from './layout/job-categories/job-categories.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { ProfessionalManagementComponent } from './layout/professional-managemen
     ContentManagementComponent,
     VerifyOtpComponent,
     ProfessionalManagementComponent,
+    JobCategoriesComponent,
   ],
   imports: [
     BrowserModule,

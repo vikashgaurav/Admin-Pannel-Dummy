@@ -1,0 +1,191 @@
+<app-header></app-header>
+
+<div class="layout-main">
+  <app-left-sidebar></app-left-sidebar>
+  <div class="subadminPage"></div>
+  <div class="sellerListPage ExplorerListPage">
+    <div class="layout-content">
+      <div class="layout-content-body">
+        <div class="title-bar">
+          <h1 class="title-bar-title">
+            <span class="d-ib">Job Categories</span>
+          </h1>
+        </div>
+        <div class="row gutter-xs">
+          <div class="col-xs-12">
+            <div class="card">
+              <div class="row" style="margin-bottom: 10px;">
+                <div class="col-md-5">
+                </div>
+                <div class="col-md-7">
+                  <div class="xsl">
+                    <button class="btn btn-info btn-sm btn-labeled f-16" type="button" data-toggle="modal" data-target="#addUser"
+                      (click)="create_cat()" >
+                      Add Job Categorie
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-header">
+                <div class="card-actions">
+                  <!-- <button type="button" class="card-action card-toggler" title="Collapse"></button>
+                              <button type="button" class="card-action card-reload" title="Reload"></button> -->
+
+                </div>
+                <strong>Job categorie List</strong>
+              </div>
+              <div class="card-body">
+                <div class="row" style="margin-bottom: 10px;">
+                  <div class="col-md-9">
+                    <!-- <button (click)="exportAsXLSX()"><i class="fa fa-file-excel-o" style="font-size:48px;color:blue"></i></button> -->
+                  </div>
+                  <div class="col-md-3">
+                    <input class="form-control" (keyup)="applyFilter($event.target.value)" type="search" placeholder="search..." />
+
+                  </div>
+                </div>
+
+                <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+                  <!-- Position Column -->
+                  <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> S. No. </th>
+                    <td mat-cell *matCellDef="let element; let i = index"> {{i+1}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="Name_English">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name English </th>
+                    <td mat-cell *matCellDef="let element"> {{element.cat_name}}</td>
+                  </ng-container>
+
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="Name_portugues">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name Portugues </th>
+                    <td mat-cell *matCellDef="let element"> {{element.cat_name_portugues}}</td>
+                  </ng-container>
+
+
+
+
+
+                  <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef> Action </th>
+                    <td mat-cell *matCellDef="let element">
+                      
+                      <button class="btn btn-success btn-sm btn-labeled" type="button" data-toggle="modal" data-target="#addUser" (click)="selectEditUser(element)">
+                        <span class="btn-label">
+                          <i class="fa fa-edit icon-lg icon-fw" aria-hidden="true"></i>
+                        </span>
+                        Edit
+                      </button>
+
+                     
+                      <button class="btn btn-danger btn-sm btn-labeled" type="button" data-toggle="modal" data-target="#deleteUser"
+                        (click)="selectDeleteUser(element)">
+                        <span class="btn-label">
+                          <i class="fa fa-trash icon-lg icon-fw"></i>
+                        </span>
+                        Delete
+                      </button>
+
+                    </td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                <mat-paginator [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons></mat-paginator>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+ 
+
+
+
+  <!-----  Modal DELETE   ---->
+  <div id="deleteUser" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="text-center">
+            <h4 style="color:  #c90101;">Are you sure you want to delete this Job Categorie?</h4>
+            <div class="m-t-lg">
+              <button class="btn btn-danger" data-dismiss="modal" type="button" (click)="deleteUser()">Yes</button>
+              <button class="btn btn-success" data-dismiss="modal" type="button">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="deleted-me">
+    <div class="modal-dialog modal-sm" data-dismiss="modal">
+      <div class="modal-content">
+        <div class="modal-body" style="text-align: center;">
+          <h4 style="color:  #c90101;">Deleted Successfully !</h4>
+          <div class="successful-icon" style="color:  #c90101;">
+            <i class="fa fa-check-square"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="addUser" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-black">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">×</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title">Add Job Categorie</h4>
+        </div>
+        <div class="modal-body provider-detail">
+          <div class="row">
+            <div class="col-xs-12">
+              <form class="form" [formGroup]="newJob">
+                <div class="row">
+                 
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="" class="control-label">Category Name</label>
+                      <input formControlName="cat_name" class="form-control" type="text" [ngClass]="{'is-invalid': submitted && f.cat_name.errors}">
+                      <div *ngIf="submitted && f.cat_name.errors" class="invalid-feedback">
+                        <div *ngIf="submitted && f.cat_name.errors.required">Category name is required</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="" class="control-label">Category Name Portugues</label>
+                      <input formControlName="cat_name_portugues" class="form-control" type="text" [ngClass]="{'is-invalid': submitted && f.cat_name_portugues.errors}">
+                      <div *ngIf="submitted && f.cat_name_portugues.errors" class="invalid-feedback">
+                        <div *ngIf="submitted && f.cat_name_portugues.errors.required">Category Name Portugues is required</div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class=" col-sm-12 col-md-12">
+                    <div class="form-group padding-top-10">
+                      <button class="btn btn-success mr-5" type="button" *ngIf="!updateUser" (click)="createUser()">Save</button>
+                      <button class="btn btn-success mr-5" type="button" *ngIf="updateUser" (click)="updateSelectedUser()">Update</button>
+                      <button class="btn btn-danger mr-5" type="" data-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

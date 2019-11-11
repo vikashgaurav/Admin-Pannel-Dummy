@@ -10,12 +10,12 @@ import { from } from 'rxjs';
 declare var $: any;
 declare var iEdit: any;
 @Component({
-  selector: 'app-professional-management',
-  templateUrl: './professional-management.component.html',
-  styleUrls: ['./professional-management.component.css']
+  selector: 'app-job-categories',
+  templateUrl: './job-categories.component.html',
+  styleUrls: ['./job-categories.component.css']
 })
-export class ProfessionalManagementComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'empid', 'name', 'status', 'mobile', 'created_on', 'action'];
+export class JobCategoriesComponent implements OnInit {
+  displayedColumns: string[] = ['position', 'Name_English', 'Name_portugues', 'action'];
   Userlist: any = [];
   dataSource = new MatTableDataSource(this.Userlist);
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -25,12 +25,17 @@ export class ProfessionalManagementComponent implements OnInit {
   selectedBlockUser: any;
   selectedEditUser: any;
   updateUser: boolean = false;
-
+  cat_name: any; cat_name_portugues:any;
   environment: any;
-  newEmployee: FormGroup;
+  newJob: FormGroup;
   submitted: boolean = false;
-  constructor(private api: HttpService, fb: FormBuilder, private utils: UtilsService, private router: Router, private excelService: ExcelService) {
+  constructor(private api: HttpService,private fb: FormBuilder, private utils: UtilsService, private router: Router, private excelService: ExcelService) {
     this.environment = environment;
+    this.newJob = this.fb.group({
+      cat_name: ['', Validators.required],
+      cat_name_portugues: ['', Validators.required],
+
+    });
   }
 
   ngOnInit() {
@@ -48,7 +53,7 @@ export class ProfessionalManagementComponent implements OnInit {
 
 
   getEmployeeList() {
-    this.api.getProfessionalList().subscribe(
+    this.api.getCategorieList().subscribe(
       data => {
         this.Userlist = data['response'];
         console.log(data)
@@ -69,63 +74,98 @@ export class ProfessionalManagementComponent implements OnInit {
       }
     );
   }
+  get f() { return this.newJob.controls; }
 
+  createUser(){
 
+    this.submitted = true;
+    if (this.newJob.invalid) {
+      return;
+    }
+    let dataToSend={
+      cat_name:this.newJob.value.cat_name,
+      cat_name_portugues: this.newJob.value.cat_name_portugues
+    }
+    this.api.create_cat(dataToSend).subscribe(
+      data => {
+        this.utils.alert('success', data['message']);
+        $('#addUser').modal('hide');
+        this.getEmployeeList();
 
+      },
+      error => {
+        console.log(error);
+        this.utils.alert(error, error.error.message);
+      }
+    );
+   
+  }
+  create_cat(){
+    this.updateUser=false
+    this.newJob = this.fb.group({
+      cat_name: ['', Validators.required],
+      cat_name_portugues: ['', Validators.required],
+
+    });
+  }
+  value_to_show:any;
+  selectEditUser(a){
+    this.updateUser=true;
+    this.value_to_show=a;
+    this.newJob = this.fb.group({
+      cat_name: [this.value_to_show.cat_name, Validators.required],
+      cat_name_portugues: [this.value_to_show.cat_name_portugues, Validators.required],
+
+    });
+  }
 
 
   selectDeleteUser(user) {
-    debugger
     this.selectedDeleteUser = user;
   }
 
   deleteUser() {
+    debugger;
     let dataToSend = {
-      id: this.selectedDeleteUser._id
+      _id: this.selectedDeleteUser._id
     };
-    this.api.deleteProfessional(dataToSend).subscribe(
+    this.api.delete_create_cat(dataToSend).subscribe(
       data => {
         this.utils.alert('success', data['message']);
         this.getEmployeeList();
       },
       error => {
-        console.log(error);
-        debugger;
+        this.utils.alert(error, error.error.message);
+       
       }
     );
   }
 
-  selectBlockUser(user) {
-    this.selectedBlockUser = user;
-  }
-
-  blockUser() {
-    debugger
-    let dataToSend = {
-      id: this.selectedBlockUser._id,
-      is_blocked: !this.selectedBlockUser.is_blocked
-    };
-    this.api.blockProfessional(dataToSend).subscribe(
-      data => {
-        this.utils.alert('success', data['message']);
-        this.getEmployeeList();
-      },
-      error => {
-        console.log(error);
-        debugger;
-      }
-    );
-  }
-
-  datatoshow: any; imagetoshow: any;
-  selectviewdata(element) {
-    this.datatoshow = element
-    if (element.profile_image != "N/A") {
-      this.imagetoshow = element.profile_image ? environment.imageUrl + element.profile_image : 'assets/img/3002121059.jpg'
-    } else {
-      this.imagetoshow = 'assets/img/3002121059.jpg'
+  updateSelectedUser(){
+    this.submitted = true;
+    if (this.newJob.invalid) {
+      return;
     }
+    let dataToSend = {
+      _id: this.value_to_show._id,
+      cat_name: this.newJob.value.cat_name,
+      cat_name_portugues: this.newJob.value.cat_name_portugues
+    }
+    this.api.edit_create_cat(dataToSend).subscribe(
+      data => {
+        this.utils.alert('success', data['message']);
+        $('#addUser').modal('hide');
+        this.getEmployeeList();
+
+      },
+      error => {
+        console.log(error);
+        this.utils.alert(error, error.error.message);
+      }
+    );
   }
+
+
 
 
   applyFilter(filterValue: string) {
@@ -136,3 +176,4 @@ export class ProfessionalManagementComponent implements OnInit {
     this.excelService.exportAsExcelFile(this.Userlist, 'sample');
   }
 }
+

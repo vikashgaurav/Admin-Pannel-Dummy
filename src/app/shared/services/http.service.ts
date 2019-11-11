@@ -92,4 +92,18 @@ export class HttpService {
   blockProfessional(data) {
     return this.http.post('admin/blockProfessional', data);
   }
+
+  //get categories
+  getCategorieList() {
+    return this.http.get('admin/get_create_cat');
+  }
+  create_cat(data){
+    return this.http.post('admin/create_cat', data);
+  }
+  delete_create_cat(data){
+    return this.http.post('admin/delete_create_cat', data);
+  }
+  edit_create_cat(data){
+    return this.http.post('admin/edit_create_cat', data);
+  }
 }

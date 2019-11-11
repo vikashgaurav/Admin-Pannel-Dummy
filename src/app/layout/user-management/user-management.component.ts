@@ -116,6 +116,15 @@ export class UserManagementComponent implements OnInit {
       }
     );
   }
+  datatoshow: any; imagetoshow: any;
+  selectviewdata(element) {
+    this.datatoshow = element
+    if (element.profile_image != "N/A") {
+      this.imagetoshow = element.profile_image ? environment.imageUrl + element.profile_image : 'assets/img/3002121059.jpg'
+    } else {
+      this.imagetoshow = 'assets/img/3002121059.jpg'
+    }
+  }
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
