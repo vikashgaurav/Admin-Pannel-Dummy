@@ -33,6 +33,7 @@ import {
 } from '@angular/material';
 
 import { ExcelService } from './shared/services/excel.service';
+import { CookieService } from 'ngx-cookie-service';
 
 import { ContentManagementComponent } from './layout/content-management/content-management.component';
 import { VerifyOtpComponent } from './shared/verify-otp/verify-otp.component';
@@ -82,7 +83,8 @@ import { JobCategoriesComponent } from './layout/job-categories/job-categories.c
       useClass: AuthInterceptor, 
       multi: true 
     },
-    ExcelService
+    ExcelService,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })
