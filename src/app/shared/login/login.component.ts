@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     private api: HttpService,
     private router: Router
   ) {
-    let adminCredentials = this.utils.get('appcrowd_admin_data');
+    let adminCredentials = this.utils.get('credentail');
     this.loginForm = fb.group({
       email: [ adminCredentials ? adminCredentials.email : "", [Validators.required, Validators.email]],
       password: [adminCredentials ? adminCredentials.password : "", Validators.required]
@@ -38,15 +38,15 @@ export class LoginComponent implements OnInit {
 
     let remember_me = $('#remember_me').is(":checked");
     if(remember_me) {
-      this.utils.set('appcrowd_admin_data', this.loginForm.value);
+      this.utils.set('credentail', this.loginForm.value);
     } else {
-      this.utils.removeData('appcrowd_admin_data');
+      this.utils.removeData('credentail');
     }
 
     this.api.login(this.loginForm.value).subscribe(
       data=> {
         console.log(data)
-        this.utils.set('appcrowd_admin_data', data['response']);
+        this.utils.set('zaoplus_admin_data', data['response']);
         this.utils.alert('success', 'Admin logged in successfully');
         this.router.navigate(['/dashboard']);
       },

@@ -32,26 +32,26 @@ export class HeaderComponent implements OnInit {
       }
     }); 
     this.utils.profileStatus.subscribe(data=> {
-      this.adminData = this.utils.get('appcrowd_admin_data');
+      this.adminData = this.utils.get('zaoplus_admin_data');
       this.ImageUrl = this.adminData.profile_image ? environment.baseUrl+""+this.adminData.profile_image+"?"+new Date().getTime(): 'assets/img/8447261358.jpg';
     });
   }
 
   logout(){
-    let admin = this.utils.get('appcrowd_admin_data');
+    let admin = this.utils.get('zaoplus_admin_data');
     this.api.logout({
       id: admin._id
     }).subscribe(
       data=> {
         this.utils.alert('success', data['message']);
         this.router.navigate(['/login']);
-        this.utils.removeData('appcrowd_admin_data');
+        this.utils.removeData('zaoplus_admin_data');
       },
       error=> {
         console.log(error);
         if(error['status'] == 400){
           this.router.navigate(['/login']);
-          this.utils.removeData('appcrowd_admin_data');
+          this.utils.removeData('zaoplus_admin_data');
         }
         debugger;
       }

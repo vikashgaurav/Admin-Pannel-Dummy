@@ -5,10 +5,10 @@ import { environment } from '../../../environments/environment';
 export class AuthInterceptor implements HttpInterceptor {
     constructor() { }
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        let adminData = localStorage.getItem('appcrowd_admin_data');
+        let adminData = localStorage.getItem('zaoplus_admin_data');
         var token;
         if(adminData){
-            token = JSON.parse(localStorage.getItem('appcrowd_admin_data')).access_token;
+            token = JSON.parse(localStorage.getItem('zaoplus_admin_data')).access_token;
         } else {
             token = '';
         }

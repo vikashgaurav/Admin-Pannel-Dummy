@@ -18,7 +18,7 @@ export class VerifyOtpComponent implements OnInit {
   ) { }
   adminData;
   ngOnInit() {
-    this.adminData = this.utils.get('appcrowd_admin_data');
+    this.adminData = this.utils.get('zaoplus_admin_data');
     console.log(this.adminData)
   }
 
@@ -28,7 +28,7 @@ export class VerifyOtpComponent implements OnInit {
       data => {
         if (data['status'] == -1) {
           this.utils.alert('warn', data['message']);
-          this.utils.set('appcrowd_admin_data', data['response']);
+          this.utils.set('zaoplus_admin_data', data['response']);
           this.router.navigate(['/reset-password']);
         }
         this.utils.alert('success', data['message']);

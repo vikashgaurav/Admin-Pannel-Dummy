@@ -47,7 +47,7 @@ export class ChangPasswordComponent implements OnInit {
         this.utils.alert('error', error['error']['message']);
         if(error['status'] == 400){
           this.router.navigate(['/login']);
-          this.utils.removeData('appcrowd_admin_data');
+          this.utils.removeData('zaoplus_admin_data');
         }
         debugger;
       }

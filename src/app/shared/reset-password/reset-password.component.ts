@@ -31,7 +31,7 @@ export class ResetPasswordComponent implements OnInit {
   }
   adminData
   ngOnInit() {
-    this.adminData = this.utils.get('appcrowd_admin_data');
+    this.adminData = this.utils.get('zaoplus_admin_data');
     console.log(this.adminData)
   }
 

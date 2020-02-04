@@ -19,7 +19,7 @@ export class EditProfileComponent implements OnInit {
   profileImage: any;
   submitted:boolean = false;
   constructor(private utils: UtilsService, fb: FormBuilder, private api: HttpService, private router: Router) {
-    this.adminData = this.utils.get('appcrowd_admin_data');
+    this.adminData = this.utils.get('zaoplus_admin_data');
     this.environment = environment;
    
     this.selectedFile = this.adminData.profile_image ? this.adminData.profile_image : ''
@@ -63,8 +63,8 @@ export class EditProfileComponent implements OnInit {
   //   debugger
   //   this.api.updateProfile(dataToSend).subscribe(
   //     data=> {
-  //       this.utils.removeData('appcrowd_admin_data');
-  //       this.utils.set('appcrowd_admin_data', data['data']);
+  //       this.utils.removeData('zaoplus_admin_data');
+  //       this.utils.set('zaoplus_admin_data', data['data']);
   //       this.utils.alert('success', data['message']);
   //       this.utils.profileChanged('Changed');
   //       this.router.navigate(['/profile']);
@@ -74,7 +74,7 @@ export class EditProfileComponent implements OnInit {
   //       this.utils.alert('error', error['error']['message']);
   //       if(error['status'] == 400){
   //         this.router.navigate(['/login']);
-  //         this.utils.removeData('appcrowd_admin_data');
+  //         this.utils.removeData('zaoplus_admin_data');
   //       }
   //     }
   //   );
@@ -97,8 +97,8 @@ export class EditProfileComponent implements OnInit {
   
     this.api.updateProfile(uploadData).subscribe(
       data => {
-        this.utils.removeData('appcrowd_admin_data');
-        this.utils.set('appcrowd_admin_data', data['response']);
+        this.utils.removeData('zaoplus_admin_data');
+        this.utils.set('zaoplus_admin_data', data['response']);
         this.utils.alert('success', data['message']);
         this.router.navigate(['/profile']);
       },
@@ -107,7 +107,7 @@ export class EditProfileComponent implements OnInit {
         this.utils.alert('error', error['error']['message']);
         if (error['status'] == 400) {
           this.router.navigate(['/login']);
-          this.utils.removeData('appcrowd_admin_data');
+          this.utils.removeData('zaoplus_admin_data');
         }
       }
     );

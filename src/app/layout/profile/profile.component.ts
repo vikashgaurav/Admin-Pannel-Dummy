@@ -18,7 +18,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.utils.profileStatus.subscribe(data=> {
-      this.adminData = this.utils.get('appcrowd_admin_data');
+      this.adminData = this.utils.get('zaoplus_admin_data');
       console.log(this.adminData)
       this.ImageUrl = this.adminData.profile_image ? environment.baseUrl+""+this.adminData.profile_image+"?"+new Date().getTime(): 'assets/img/8447261358.jpg';
     });

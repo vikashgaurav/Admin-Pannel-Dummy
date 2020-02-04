@@ -24,12 +24,12 @@ export class ForgotPasswordComponent implements OnInit {
       data=> {
         if(data['status'] == -1){
           this.utils.alert('warn', data['message']);
-          this.utils.set('appcrowd_admin_data', data['response']);
+          this.utils.set('zaoplus_admin_data', data['response']);
           this.router.navigate(['/VerifyOtp']);
           return;
         }
         this.utils.alert('success', data['message']);
-        this.utils.set('appcrowd_admin_data', data['response']);
+        this.utils.set('zaoplus_admin_data', data['response']);
         this.router.navigate(['/VerifyOtp']);
       },
       error=> {
