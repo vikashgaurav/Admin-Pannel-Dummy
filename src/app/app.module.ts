@@ -10,15 +10,11 @@ import { LoginComponent } from './shared/login/login.component';
 import { ForgotPasswordComponent } from './shared/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './shared/reset-password/reset-password.component';
 import { DashboardComponent } from './layout/dashboard/dashboard.component';
-
 import { ReportsComponent } from './layout/reports/reports.component';
-
 import { SettingsComponent } from './layout/settings/settings.component';
 import { ProfileComponent } from './layout/profile/profile.component';
 import { EditProfileComponent } from './layout/edit-profile/edit-profile.component';
-
 import { ChangPasswordComponent } from './layout/chang-password/chang-password.component';
-
 import { UserManagementComponent } from './layout/user-management/user-management.component';
 // import { ChartsModule } from 'ng2-charts';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -39,6 +35,9 @@ import { ContentManagementComponent } from './layout/content-management/content-
 import { VerifyOtpComponent } from './shared/verify-otp/verify-otp.component';
 import { ProfessionalManagementComponent } from './layout/professional-management/professional-management.component';
 import { JobCategoriesComponent } from './layout/job-categories/job-categories.component';
+import { FarmerListComponent } from './layout/farmer-list/farmer-list.component';
+import { SupplierListComponent } from './layout/supplier-list/supplier-list.component';
+import { AgronomistListComponent } from './layout/agronomist-list/agronomist-list.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +59,9 @@ import { JobCategoriesComponent } from './layout/job-categories/job-categories.c
     VerifyOtpComponent,
     ProfessionalManagementComponent,
     JobCategoriesComponent,
+    FarmerListComponent,
+    SupplierListComponent,
+    AgronomistListComponent,
   ],
   imports: [
     BrowserModule,

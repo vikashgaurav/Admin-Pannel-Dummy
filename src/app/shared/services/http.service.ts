@@ -106,4 +106,21 @@ export class HttpService {
   edit_create_cat(data){
     return this.http.post('admin/edit_create_cat', data);
   }
+
+  //get_farmer
+  getfarmerList() {
+    return this.http.get('admin/get_farmer_data');
+  }
+  getsupplierList() {
+    return this.http.get('admin/get_supplier_data');
+  }
+  getagronomistList() {
+    return this.http.get('admin/get_Agronomist_data');
+  }
+  block_user(data){
+    return this.http.post('admin/blockUser',data);
+  }
+  delete_user(data){
+    return this.http.post('admin/deleteUser', data);
+  }
 }

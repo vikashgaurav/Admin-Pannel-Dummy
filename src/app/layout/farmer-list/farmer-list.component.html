@@ -1,0 +1,281 @@
+<app-header></app-header>
+
+<div class="layout-main">
+  <app-left-sidebar></app-left-sidebar>
+  <div class="subadminPage"></div>
+  <div class="sellerListPage ExplorerListPage">
+    <div class="layout-content">
+      <div class="layout-content-body">
+        <div class="title-bar">
+          <h1 class="title-bar-title">
+            <span class="d-ib">Farmer Management</span>
+          </h1>
+        </div>
+        <div class="row gutter-xs">
+          <div class="col-xs-12">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-actions">
+                  <!-- <button type="button" class="card-action card-toggler" title="Collapse"></button>
+                              <button type="button" class="card-action card-reload" title="Reload"></button> -->
+
+                </div>
+                <strong>Farmer List</strong>
+              </div>
+              <div class="card-body">
+                <div class="row" style="margin-bottom: 10px;">
+                  <div class="col-md-9">
+                    <!-- <button (click)="exportAsXLSX()"><i class="fa fa-file-excel-o" style="font-size:48px;color:blue"></i></button> -->
+                  </div>
+                  <div class="col-md-3">
+                    <input class="form-control" (keyup)="applyFilter($event.target.value)" type="search"
+                      placeholder="search..." />
+                    <!-- <div class="xsl">
+                              <button class="btn btn-info btn-sm btn-labeled f-16" type="button" data-toggle="modal" data-target="#addUser" (click)="addNewEmployee()">
+                                Add Employee
+                              </button>
+                            </div> -->
+                  </div>
+                </div>
+
+                <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+                  <!-- Position Column -->
+                  <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> S. No. </th>
+                    <td mat-cell *matCellDef="let element; let i = index"> {{i+1}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="empid">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Email ID </th>
+                    <td mat-cell *matCellDef="let element"> {{element && element.email_id ? element.email_id : 'N/A'}}</td>
+                  </ng-container>
+
+                  <!-- Name Column -->
+                  <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element && element.first_name ? element.first_name :'N/A'}}
+                      {{element && element.last_name ? element.last_name :''}}</td>
+                  </ng-container>
+
+
+
+                  <ng-container matColumnDef="mobile">
+                    <th mat-header-cell *matHeaderCellDef> Mobile No. </th>
+                    <td mat-cell *matCellDef="let element"> {{element.country_code}}{{element.mobile_number}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef> Status </th>
+                    <td mat-cell *matCellDef="let element"><span
+                        [ngClass]="{'text-danger': element.is_blocked, 'text-success': !element.is_blocked}">
+                        {{element.is_blocked ? "Blocked" : "Unblocked"}} </span></td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="created_on">
+                    <th mat-header-cell *matHeaderCellDef> Created At </th>
+                    <td mat-cell *matCellDef="let element"> {{(element.created_on) | date}} </td>
+                  </ng-container>
+
+
+                  <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef> Action </th>
+                    <td mat-cell *matCellDef="let element">
+                      <button class="btn btn-primary btn-sm" type="button" data-toggle="modal" data-target="#viewUser"
+                        (click)="selectviewdata(element)">
+                        <i class="fa fa-eye f-16" aria-hidden="true"></i>
+                      </button>
+                      <button class="btn btn-sm btn-labeled"
+                        [ngClass]="{'btn-info': element.is_block, 'btn-warning': !element.is_block}" type="button"
+                        data-toggle="modal" data-target="#blockUser" (click)="selectBlockUser(element)">
+                        <span class="btn-label">
+                          <i class="fa fa-ban f-16" aria-hidden="true"></i>
+                        </span>
+                        {{element.is_blocked ? 'Unblock' : 'Block'}}
+                      </button>
+                      <button class="btn btn-danger btn-sm btn-labeled" type="button" data-toggle="modal"
+                        data-target="#deleteUser" (click)="selectDeleteUser(element)">
+                        <span class="btn-label">
+                          <i class="fa fa-trash icon-lg icon-fw"></i>
+                        </span>
+                        Delete
+                      </button>
+
+                    </td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                <mat-paginator [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons></mat-paginator>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+
+
+  <div id="blockUser" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="text-center">
+            <h4 style="color:  #c90101;">Are you sure you want to
+              {{selectedBlockUser?.is_blocked ? 'unblock' : 'block'}}
+              this Farmer?</h4>
+            <div class="m-t-lg">
+              <button class="btn btn-danger" data-dismiss="modal" type="button" (click)="blockUser()">Yes</button>
+              <button class="btn btn-success" data-dismiss="modal" type="button">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-----  Modal Block   ---->
+  <!-- Modal Block Confirm-->
+  <div class="modal fade" id="deleted-me">
+    <div class="modal-dialog modal-sm" data-dismiss="modal">
+      <div class="modal-content">
+        <div class="modal-body" style="text-align: center;">
+          <h4 style="color:  #c90101;">Blocked Successfully !</h4>
+          <div class="successful-icon" style="color:  #c90101;">
+            <i class="fa fa-check-square"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Modal Block Confirm-->
+
+  <!-----  Modal DELETE   ---->
+  <div id="deleteUser" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="text-center">
+            <h4 style="color:  #c90101;">Are you sure you want to delete this Farmer?</h4>
+            <div class="m-t-lg">
+              <button class="btn btn-danger" data-dismiss="modal" type="button" (click)="deleteUser()">Yes</button>
+              <button class="btn btn-success" data-dismiss="modal" type="button">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="deleted-me">
+    <div class="modal-dialog modal-sm" data-dismiss="modal">
+      <div class="modal-content">
+        <div class="modal-body" style="text-align: center;">
+          <h4 style="color:  #c90101;">Deleted Successfully !</h4>
+          <div class="successful-icon" style="color:  #c90101;">
+            <i class="fa fa-check-square"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div id="viewUser" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-primary">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">×</span>
+            <span class="sr-only">Close</span>
+          </button>
+          <h4 class="modal-title">Farmer full detail</h4>
+        </div>
+        <div class="modal-body provider-detail" *ngIf="datatoshow">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card text-center">
+                <div class="card-image">
+                  <div class="overlay"></div>
+                </div>
+                <div class="card-avatar text-left">
+                  <a class="card-thumbnail rounded" style="width: 150px;height: 160px;overflow: hidden;" href="#">
+                    <img class="img-responsive" src="{{imagetoshow}}" alt="Instagram">
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title text-left">Full Name</h3>
+                  <p class="text-justify">{{datatoshow && datatoshow.first_name ? datatoshow.first_name :'N/A'}}
+                    {{datatoshow.last_name}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <ul class="media-list">
+                    <li class="media">
+                      <div class="media-middle media-body">
+                        <h4 class="m-y-0">Mobile No.</h4>
+                        <small>{{datatoshow.country_code}} {{datatoshow.mobile_number}}</small>
+                      </div>
+                    </li>
+                    <li class="media">
+                      <div class="media-middle media-body">
+                        <h4 class="m-y-0">Email</h4>
+                        <small>{{datatoshow && datatoshow.email_id ? datatoshow.email_id : 'N/A'}}</small>
+                      </div>
+                    </li>
+                    <!-- <li class="media">
+                      <div class="media-middle media-body">
+                        <h4 class="m-y-0">Account holder name</h4>
+                        <small>{{datatoshow.account_holder_name}}</small>
+                      </div>
+                    </li>
+                    <li class="media">
+                      <div class="media-middle media-body">
+                        <h4 class="m-y-0">Account number </h4>
+                        <small>{{datatoshow.account_number}}</small>
+                      </div>
+                    </li>
+                    <li class="media">
+                      <div class="media-middle media-body">
+                        <h4 class="m-y-0">Bank Code </h4>
+                        <small>{{datatoshow.bank_code}}</small>
+                      </div>
+                    </li> -->
+                    <li class="media">
+                      <div class="media-middle media-body">
+                        <h4 class="m-y-0">Mobile Verified</h4>
+                        <!-- <small>{{datatoshow.is_mobile_verify}}</small> -->
+                        <small *ngIf="datatoshow.is_mobile_verify==true">Verified</small>
+                        <small *ngIf="datatoshow.is_mobile_verify==false">Not Verified</small>
+                      </div>
+                    </li>
+                    <!-- <li class="media">
+                      <div class="media-middle media-body">
+                        <h4 class="m-y-0">Language</h4>
+                        <small *ngIf="datatoshow.is_language==0">English</small>
+                        <small *ngIf="datatoshow.is_language==1">Arabic</small>
+                      </div>
+                    </li> -->
+                    <li class="media">
+                      <div class="media-middle media-body">
+                        <h4 class="m-y-0">Account Created on</h4>
+                        <small>{{(datatoshow.created_on )  |date}}</small>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>

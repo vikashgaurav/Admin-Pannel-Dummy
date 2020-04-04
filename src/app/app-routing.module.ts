@@ -15,8 +15,9 @@ import { ContentManagementComponent } from './layout/content-management/content-
 import { VerifyOtpComponent } from './shared/verify-otp/verify-otp.component';
 import { ProfessionalManagementComponent } from './layout/professional-management/professional-management.component';
 import { JobCategoriesComponent } from './layout/job-categories/job-categories.component';
-
-
+import { FarmerListComponent } from './layout/farmer-list/farmer-list.component';
+import { SupplierListComponent } from './layout/supplier-list/supplier-list.component';
+import { AgronomistListComponent } from './layout/agronomist-list/agronomist-list.component';
 import { AuthGuard } from './shared/services/auth.guard.service';
 
 const routes: Routes = [
@@ -35,6 +36,11 @@ const routes: Routes = [
   { path: 'user-management', component: UserManagementComponent, canActivate: [AuthGuard]},
   { path: 'professional-management', component: ProfessionalManagementComponent, canActivate: [AuthGuard] },
   { path: 'job-categorie', component: JobCategoriesComponent, canActivate: [AuthGuard] },
+  { path: 'farmer_list', component: FarmerListComponent, canActivate: [AuthGuard] },
+  { path: 'supplier_list', component: SupplierListComponent, canActivate: [AuthGuard] },
+  { path: 'agronomist_list', component: AgronomistListComponent, canActivate: [AuthGuard] },
+
+
 ];
 
 @NgModule({
