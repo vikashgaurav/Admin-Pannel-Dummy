@@ -15,7 +15,6 @@ import { SettingsComponent } from './layout/settings/settings.component';
 import { ProfileComponent } from './layout/profile/profile.component';
 import { EditProfileComponent } from './layout/edit-profile/edit-profile.component';
 import { ChangPasswordComponent } from './layout/chang-password/chang-password.component';
-import { UserManagementComponent } from './layout/user-management/user-management.component';
 // import { ChartsModule } from 'ng2-charts';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,13 +30,15 @@ import {
 import { ExcelService } from './shared/services/excel.service';
 import { CookieService } from 'ngx-cookie-service';
 
-import { ContentManagementComponent } from './layout/content-management/content-management.component';
 import { VerifyOtpComponent } from './shared/verify-otp/verify-otp.component';
-import { ProfessionalManagementComponent } from './layout/professional-management/professional-management.component';
 import { JobCategoriesComponent } from './layout/job-categories/job-categories.component';
 import { FarmerListComponent } from './layout/farmer-list/farmer-list.component';
 import { SupplierListComponent } from './layout/supplier-list/supplier-list.component';
 import { AgronomistListComponent } from './layout/agronomist-list/agronomist-list.component';
+import { EductionListComponent } from './layout/eduction-list/eduction-list.component';
+import { InstituteListComponent } from './layout/institute-list/institute-list.component';
+import { IdCardListComponent } from './layout/id-card-list/id-card-list.component';
+import { AgroTechSpecComponent } from './layout/agro-tech-spec/agro-tech-spec.component';
 
 @NgModule({
   declarations: [
@@ -54,14 +55,15 @@ import { AgronomistListComponent } from './layout/agronomist-list/agronomist-lis
     ProfileComponent,
     EditProfileComponent,
     ChangPasswordComponent,
-    UserManagementComponent,
-    ContentManagementComponent,
     VerifyOtpComponent,
-    ProfessionalManagementComponent,
     JobCategoriesComponent,
     FarmerListComponent,
     SupplierListComponent,
     AgronomistListComponent,
+    EductionListComponent,
+    InstituteListComponent,
+    IdCardListComponent,
+    AgroTechSpecComponent,
   ],
   imports: [
     BrowserModule,

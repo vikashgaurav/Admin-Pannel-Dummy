@@ -86,14 +86,7 @@
                         (click)="selectviewdata(element)">
                         <i class="fa fa-eye f-16" aria-hidden="true"></i>
                       </button>
-                      <button class="btn btn-sm btn-labeled"
-                        [ngClass]="{'btn-info': element.is_block, 'btn-warning': !element.is_block}" type="button"
-                        data-toggle="modal" data-target="#blockUser" (click)="selectBlockUser(element)">
-                        <span class="btn-label">
-                          <i class="fa fa-ban f-16" aria-hidden="true"></i>
-                        </span>
-                        {{element.is_blocked ? 'Unblock' : 'Block'}}
-                      </button>
+                     
                       <button class="btn btn-danger btn-sm btn-labeled" type="button" data-toggle="modal"
                         data-target="#deleteUser" (click)="selectDeleteUser(element)">
                         <span class="btn-label">
@@ -101,6 +94,14 @@
                         </span>
                         Delete
                       </button>
+                       <button class="btn btn-sm btn-labeled"
+                         [ngClass]="{'btn-info': element.is_block, 'btn-warning': !element.is_block}" type="button"
+                         data-toggle="modal" data-target="#blockUser" (click)="selectBlockUser(element)">
+                         <span class="btn-label">
+                           <i class="fa fa-ban f-16" aria-hidden="true"></i>
+                         </span>
+                         {{element.is_blocked ? 'Unblock' : 'Block'}}
+                       </button>
 
                     </td>
                   </ng-container>

@@ -1,3 +1,6 @@
 .navbar-header{
-    background-color: #191717 !important;
+    background-color: #FF8617 !important;
+}
+.navbar-default .sidenav-toggler.collapse{
+    background-color: #FF8617 !important;
 }

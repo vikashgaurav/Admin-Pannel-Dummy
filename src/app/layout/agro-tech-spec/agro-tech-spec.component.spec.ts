@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContentManagementComponent } from './content-management.component';
+import { AgroTechSpecComponent } from './agro-tech-spec.component';
 
-describe('ContentManagementComponent', () => {
-  let component: ContentManagementComponent;
-  let fixture: ComponentFixture<ContentManagementComponent>;
+describe('AgroTechSpecComponent', () => {
+  let component: AgroTechSpecComponent;
+  let fixture: ComponentFixture<AgroTechSpecComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContentManagementComponent ]
+      declarations: [ AgroTechSpecComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContentManagementComponent);
+    fixture = TestBed.createComponent(AgroTechSpecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

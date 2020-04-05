@@ -9,15 +9,16 @@ import { ReportsComponent } from './layout/reports/reports.component';
 import { ProfileComponent } from './layout/profile/profile.component';
 import { EditProfileComponent } from './layout/edit-profile/edit-profile.component';
 import { ChangPasswordComponent } from './layout/chang-password/chang-password.component';
-import { UserManagementComponent } from './layout/user-management/user-management.component';
 import { SettingsComponent } from './layout/settings/settings.component';
-import { ContentManagementComponent } from './layout/content-management/content-management.component';
 import { VerifyOtpComponent } from './shared/verify-otp/verify-otp.component';
-import { ProfessionalManagementComponent } from './layout/professional-management/professional-management.component';
 import { JobCategoriesComponent } from './layout/job-categories/job-categories.component';
 import { FarmerListComponent } from './layout/farmer-list/farmer-list.component';
 import { SupplierListComponent } from './layout/supplier-list/supplier-list.component';
 import { AgronomistListComponent } from './layout/agronomist-list/agronomist-list.component';
+import { EductionListComponent } from './layout/eduction-list/eduction-list.component';
+import { InstituteListComponent } from './layout/institute-list/institute-list.component';
+import { IdCardListComponent } from './layout/id-card-list/id-card-list.component';
+import { AgroTechSpecComponent } from './layout/agro-tech-spec/agro-tech-spec.component';
 import { AuthGuard } from './shared/services/auth.guard.service';
 
 const routes: Routes = [
@@ -26,19 +27,20 @@ const routes: Routes = [
   {path: 'forgot-password', component:ForgotPasswordComponent},
   { path: 'VerifyOtp', component: VerifyOtpComponent},
   {path: 'reset-password', component:ResetPasswordComponent},
-  { path: 'content_management', component: ContentManagementComponent },
   {path: 'dashboard', component:DashboardComponent, canActivate: [AuthGuard]},
   {path: 'reports', component: ReportsComponent, canActivate: [AuthGuard]},
   {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
   {path: 'edit-profile', component: EditProfileComponent, canActivate: [AuthGuard]},
   {path: 'change-password', component: ChangPasswordComponent, canActivate: [AuthGuard]},
   {path: 'setting', component: SettingsComponent, canActivate: [AuthGuard]},
-  { path: 'user-management', component: UserManagementComponent, canActivate: [AuthGuard]},
-  { path: 'professional-management', component: ProfessionalManagementComponent, canActivate: [AuthGuard] },
   { path: 'job-categorie', component: JobCategoriesComponent, canActivate: [AuthGuard] },
   { path: 'farmer_list', component: FarmerListComponent, canActivate: [AuthGuard] },
   { path: 'supplier_list', component: SupplierListComponent, canActivate: [AuthGuard] },
   { path: 'agronomist_list', component: AgronomistListComponent, canActivate: [AuthGuard] },
+  { path: 'education_list', component: EductionListComponent, canActivate: [AuthGuard] },
+  { path: 'institute_list', component: InstituteListComponent, canActivate: [AuthGuard] },
+  { path: 'idcard_list', component: IdCardListComponent, canActivate: [AuthGuard] },
+  { path: 'agro_tech_spec_list', component: AgroTechSpecComponent, canActivate: [AuthGuard] },
 
 
 ];

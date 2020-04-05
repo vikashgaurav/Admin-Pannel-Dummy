@@ -35,23 +35,7 @@ export class HttpService {
     return this.http.post('admin/change_password', data);
   }
 
-  // user management
-  getUserList(){
-    return this.http.get('admin/usersList');
-  }
-
-  createNewUser(data){
-    return this.http.post('admin/createUser', data);
-  }
-
-  deleteUser(data){
-    return this.http.post('admin/deleteUser', data);
-  }
-
-  blockUser(data){
-    return this.http.post('admin/blockUser', data);
-  }
-
+ 
   updateUser(data){
     return this.http.post('admin/updateUser', data);
   }
@@ -80,18 +64,7 @@ export class HttpService {
     return this.http.get('admin/getcontent')
   }
 
-  //get professional
-  getProfessionalList() {
-    return this.http.get('admin/professionalList');
-  }
 
-  deleteProfessional(data) {
-    return this.http.post('admin/deleteProfessional', data);
-  }
-
-  blockProfessional(data) {
-    return this.http.post('admin/blockProfessional', data);
-  }
 
   //get categories
   getCategorieList() {
@@ -122,5 +95,18 @@ export class HttpService {
   }
   delete_user(data){
     return this.http.post('admin/deleteUser', data);
+  }
+  //education 
+
+  get_list_of_education(data){
+    return this.http.post('admin/get_list_of_education', data);
+  }
+
+  add_list_data(data){
+    return this.http.post('admin/add_list_data', data);
+  }
+
+  edit_education(data){
+  return this.http.post('admin/edit_education', data);
   }
 }
