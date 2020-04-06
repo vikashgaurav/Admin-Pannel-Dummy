@@ -30,6 +30,18 @@ export class LeftSidebarComponent implements OnInit {
   // }
 
   // $('.sidenav-collapse .sidenav').toggleClass('sidenav-collapsed');
+    $('.has-subnav > a').on('click', function () {
+      $(this).parent('li').toggleClass('open');
+      $(this).next('ul').toggleClass('collapse');
+    });
+    $('.sidenav li a').on('click', function () {
+      if ($('body').hasClass('layout-sidebar-collapsed')) {
+        $('.sidenav').addClass('sidenav-collapsed');
+      } else {
+        $('.sidenav').removeClass('sidenav-collapsed');
+      }
+    });
+    
   $('.sidenav-collapse .sidenav li a').click(function(){
     if($('body').hasClass('layout-sidebar-collapsed')){
       $('.sidenav-collapse .sidenav').addClass('sidenav-collapsed');
