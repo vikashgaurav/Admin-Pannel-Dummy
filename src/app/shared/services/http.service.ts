@@ -109,4 +109,20 @@ export class HttpService {
   edit_education(data){
   return this.http.post('admin/edit_education', data);
   }
+
+  //crop
+  get_crop_admin() {
+    return this.http.get('admin/get_crop_admin');
+  }
+  add_admin_crop(data) {
+    return this.http.post('admin/add_admin_crop' , data);
+  }
+
+  //bank
+  get_bank_list(){
+    return this.http.get('admin/get_bank_list');
+  }
+  add_admin_bank(data){
+    return this.http.post('admin/add_admin_bank', data);
+  }
 }

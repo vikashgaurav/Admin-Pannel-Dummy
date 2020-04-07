@@ -1,0 +1,153 @@
+<app-header></app-header>
+
+<div class="layout-main">
+  <app-left-sidebar></app-left-sidebar>
+  <div class="subadminPage"></div>
+  <div class="sellerListPage ExplorerListPage">
+    <div class="layout-content">
+      <div class="layout-content-body">
+        <div class="title-bar">
+          <h1 class="title-bar-title">
+            <span class="d-ib">Bank Management</span>
+          </h1>
+        </div>
+        <div class="row gutter-xs">
+          <div class="col-xs-12">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-actions">
+                  <!-- <button type="button" class="card-action card-toggler" title="Collapse"></button>
+                              <button type="button" class="card-action card-reload" title="Reload"></button> -->
+
+                </div>
+                <strong>Bank List</strong>
+              </div>
+              <div class="card-body">
+                <div class="row" style="margin-bottom: 10px;">
+                  <div class="col-md-9">
+                    <!-- <button (click)="exportAsXLSX()"><i class="fa fa-file-excel-o" style="font-size:48px;color:blue"></i></button> -->
+                  </div>
+                  <div class="col-md-3">
+                    <input class="form-control" (keyup)="applyFilter($event.target.value)" type="search"
+                      placeholder="search..." />
+                    <div class="xsl">
+                      <button class="btn btn-info btn-sm btn-labeled f-16" type="button" data-toggle="modal"
+                        data-target="#addmodel" (click)="addNew()">
+                        Add Bank
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+                  <!-- Position Column -->
+                  <ng-container matColumnDef="position">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> S. No. </th>
+                    <td mat-cell *matCellDef="let element; let i = index"> {{element && element.sno}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                    <td mat-cell *matCellDef="let element">
+                      {{element && element.bank_name ? element.bank_name :'N/A'}}
+                    </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef> Action </th>
+                    <td mat-cell *matCellDef="let element">
+
+                      <button class="btn btn-primary btn-sm btn-labeled" type="button" data-toggle="modal"
+                        data-target="#editmodel" (click)="selecteditUser(element)">
+                        <span class="btn-label">
+                          <i class="fa fa-edit  icon-lg icon-fw"></i>
+                        </span>
+                        Edit
+                      </button>
+                    </td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                <mat-paginator [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons></mat-paginator>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+
+
+
+  <div id="editmodel" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-black">
+          <button class="fa close" data-dismiss="modal" id="close-lang-modal1">×</button>
+          <h4 class="modal-title">Edit Bank</h4>
+        </div>
+        <div class="modal-body provider-detail">
+          <div class="row">
+            <div class="col-xs-12">
+              <form class="form">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="control-label">Name</label>
+                      <input name='name' [(ngModel)]='name' class="form-control" type="text" required />
+                    </div>
+                  </div>
+
+
+                  <div class=" col-sm-12 col-md-12">
+                    <div class="form-group padding-top-10">
+                      <button class="btn btn-success mr-5" type="button" (click)="update()">Save</button>
+                      <button class="btn btn-danger mr-5" type="" data-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="addmodel" tabindex="-1" role="dialog" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-black">
+          <button class="fa close" data-dismiss="modal" id="close-lang-modal">×</button>
+          <h4 class="modal-title">Add Bank</h4>
+        </div>
+        <div class="modal-body provider-detail">
+          <div class="row">
+            <div class="col-xs-12">
+              <form class="form">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="control-label">Name</label>
+                      <input name='name' [(ngModel)]='name' class="form-control" type="text" required />
+                    </div>
+                  </div>
+                  <div class=" col-sm-12 col-md-12">
+                    <div class="form-group padding-top-10">
+                      <button class="btn btn-success mr-5" type="button" (click)="submit_value()">Save</button>
+                      <button class="btn btn-danger mr-5" type="" data-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

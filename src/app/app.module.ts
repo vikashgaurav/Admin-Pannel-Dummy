@@ -39,6 +39,8 @@ import { EductionListComponent } from './layout/eduction-list/eduction-list.comp
 import { InstituteListComponent } from './layout/institute-list/institute-list.component';
 import { IdCardListComponent } from './layout/id-card-list/id-card-list.component';
 import { AgroTechSpecComponent } from './layout/agro-tech-spec/agro-tech-spec.component';
+import { AdminCropComponent } from './layout/admin-crop/admin-crop.component';
+import { BankListComponent } from './layout/bank-list/bank-list.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +66,8 @@ import { AgroTechSpecComponent } from './layout/agro-tech-spec/agro-tech-spec.co
     InstituteListComponent,
     IdCardListComponent,
     AgroTechSpecComponent,
+    AdminCropComponent,
+    BankListComponent,
   ],
   imports: [
     BrowserModule,

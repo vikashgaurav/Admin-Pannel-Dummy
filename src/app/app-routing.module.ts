@@ -19,6 +19,8 @@ import { EductionListComponent } from './layout/eduction-list/eduction-list.comp
 import { InstituteListComponent } from './layout/institute-list/institute-list.component';
 import { IdCardListComponent } from './layout/id-card-list/id-card-list.component';
 import { AgroTechSpecComponent } from './layout/agro-tech-spec/agro-tech-spec.component';
+import { AdminCropComponent } from './layout/admin-crop/admin-crop.component';
+import { BankListComponent } from './layout/bank-list/bank-list.component';
 import { AuthGuard } from './shared/services/auth.guard.service';
 
 const routes: Routes = [
@@ -41,7 +43,9 @@ const routes: Routes = [
   { path: 'institute_list', component: InstituteListComponent, canActivate: [AuthGuard] },
   { path: 'idcard_list', component: IdCardListComponent, canActivate: [AuthGuard] },
   { path: 'agro_tech_spec_list', component: AgroTechSpecComponent, canActivate: [AuthGuard] },
-
+  { path: 'admin_crop', component: AdminCropComponent, canActivate: [AuthGuard] },
+  { path: 'bank_list', component: BankListComponent, canActivate: [AuthGuard] },
+  
 
 ];
 
