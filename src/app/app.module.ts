@@ -41,6 +41,7 @@ import { IdCardListComponent } from './layout/id-card-list/id-card-list.componen
 import { AgroTechSpecComponent } from './layout/agro-tech-spec/agro-tech-spec.component';
 import { AdminCropComponent } from './layout/admin-crop/admin-crop.component';
 import { BankListComponent } from './layout/bank-list/bank-list.component';
+import { ProductCategoriesComponent } from './layout/product-categories/product-categories.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { BankListComponent } from './layout/bank-list/bank-list.component';
     AgroTechSpecComponent,
     AdminCropComponent,
     BankListComponent,
+    ProductCategoriesComponent,
   ],
   imports: [
     BrowserModule,

@@ -21,6 +21,7 @@ import { IdCardListComponent } from './layout/id-card-list/id-card-list.componen
 import { AgroTechSpecComponent } from './layout/agro-tech-spec/agro-tech-spec.component';
 import { AdminCropComponent } from './layout/admin-crop/admin-crop.component';
 import { BankListComponent } from './layout/bank-list/bank-list.component';
+import { ProductCategoriesComponent } from './layout/product-categories/product-categories.component';
 import { AuthGuard } from './shared/services/auth.guard.service';
 
 const routes: Routes = [
@@ -45,6 +46,8 @@ const routes: Routes = [
   { path: 'agro_tech_spec_list', component: AgroTechSpecComponent, canActivate: [AuthGuard] },
   { path: 'admin_crop', component: AdminCropComponent, canActivate: [AuthGuard] },
   { path: 'bank_list', component: BankListComponent, canActivate: [AuthGuard] },
+  { path: 'product_cate_list', component: ProductCategoriesComponent, canActivate: [AuthGuard] },
+  
   
 
 ];
